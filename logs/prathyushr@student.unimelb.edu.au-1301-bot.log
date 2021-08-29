@@ -194,3 +194,43 @@
 [2021-08-29 16:25:05,147:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
 [2021-08-29 16:25:38,658:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
 [2021-08-29 16:25:38,666:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:31:35 India Standard Time] ===============================
+[2021-08-29 16:31:35,381:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:31:38,162:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:31:41,184:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:31:42,044:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:31:42,084:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:31:42,084:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:31:52,138:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:31:52,159:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.PAUSED
+[2021-08-29 16:31:52,166:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.PAUSED
+[2021-08-29 16:31:53,702:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.CLOSED
+[2021-08-29 16:31:53,750:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:31:53,750:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.CLOSED
+[2021-08-29 16:31:58,688:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:31:58,688:       agent.PratBot]:     INFO - Session: SID:33780:SessionState.OPEN
+[2021-08-29 16:31:58,768:       agent.PratBot]:     INFO - Session: SID:33780:SessionState.OPEN
+[2021-08-29 16:32:23,484:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:32:23,484:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:32:28 India Standard Time] ===============================
+[2021-08-29 16:32:28,592:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:32:31,859:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:32:34,484:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:32:35,551:       agent.PratBot]:     INFO - Session: SID:33780:SessionState.OPEN
+[2021-08-29 16:32:35,551:       agent.PratBot]:     INFO - Session: SID:33780:SessionState.OPEN
+[2021-08-29 16:32:35,551:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:33:24,444:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:33:24,444:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:33:28 India Standard Time] ===============================
+[2021-08-29 16:33:28,580:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:33:31,442:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:33:34,989:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:33:35,934:       agent.PratBot]:     INFO - Session: SID:33780:SessionState.OPEN
+[2021-08-29 16:33:35,934:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:33:37,297:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:34:17,367:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:34:36,809:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:34:36,809:       agent.PratBot]:     INFO - Shutting Down

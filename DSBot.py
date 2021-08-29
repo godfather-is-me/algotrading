@@ -8,6 +8,8 @@ from enum import Enum
 from fmclient import Agent, OrderSide, Order, OrderType, Session
 from typing import List
 
+from fmclient.data.orm.market import Market
+
 # Student details
 SUBMISSION = {"number": "1102225", "name": "Prathyush Prashanth Rao"}
 
@@ -57,13 +59,22 @@ class DSBot(Agent):
     def order_rejected(self, info, order: Order):
         print(f"My order was rejected and the details of the order {order} are {info}")
 
+    """ Trying to send orders as a test"""
     def received_orders(self, orders: List[Order]):
-        print("Current order book is given by")
-        #Order.current = classmethod(Order.current)
-        #for i, ord in Order.current():
-        #    print(ord)
-        for o in orders:
-            print(o)
+        # Going through the list of orders
+        for ord in orders:
+            if not self._order_sent:
+                norder = Order.create_new()
+                norder.market = Market(self._public_market_id)
+                norder.price = 500
+                norder.units = 1
+                norder.order_type = OrderType.LIMIT
+                norder.order_side = OrderSide.SELL
+                norder.ref = "test order"
+                self.send_order(norder)
+                # Check to not break
+                self._order_sent = True
+
 
     def _print_trade_opportunity(self, other_order):
         self.inform(f"I am a {self.role()} with profitable order {other_order}")
