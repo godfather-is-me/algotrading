@@ -4,6 +4,8 @@ This is a template for Project 1, Task 1 (Induced demand-supply)
 Developed by Prathyush Prashanth Rao - 1102225
 """
 
+from asyncio import selector_events
+from asyncio.windows_events import SelectorEventLoop
 from enum import Enum
 from fmclient import Agent, OrderSide, Order, OrderType, Session
 from typing import List
@@ -15,6 +17,8 @@ SUBMISSION = {"number": "1102225", "name": "Prathyush Prashanth Rao"}
 
 # ------ Add a variable called PROFIT_MARGIN -----
 PROFIT_MARGIN = 10
+MIN_BUY = 0
+MAX_SELL = 1000
 
 # Define goals - it is the equation they gave
 
@@ -53,8 +57,10 @@ class DSBot(Agent):
         self._public_market_id = 0
         self._private_market_id = 0
         self._role = None               # Buyer or seller
-        self._bot_type = None           # Proactive vs reactive ###                                     ----------------- (Randomize to start off?)
+        self._bot_type = None           # Proactive vs reactive
         self._pending_order = False    # Execute only one order at a time
+        self._wait_for_server = False
+        self._wait_for_public = False
         # Set intial cash and widgets for both public and private markets
         self._cash_initial = None
         self._pub_widgets_initial = None
@@ -66,7 +72,6 @@ class DSBot(Agent):
         self._pub_widgets_avail = None
         self._prv_widgets_settled = None
         self._prv_widgets_avail = None
-
 
 
     def role(self):
@@ -84,18 +89,20 @@ class DSBot(Agent):
     # Function that returns approval when order accepted into order book
     def order_accepted(self, order: Order):
         print(f"My order was accepted and the details are {order}")
+        self._wait_for_server = False
 
     # Function that return error when order rejected from order book
     def order_rejected(self, info, order: Order):
         print(f"My order was rejected and the details of the order {order} are {info}")
+        self._wait_for_server = False
 
     # Function that shows various trade opportunities available
     def _print_trade_opportunity(self, other_order):
         self.inform(f"I am a {self.role()} with profitable order {other_order}")
 
     # Returns boolean if pending order exists
-    def _pending_order_check(orders):
-        for key, ord in Order.current().items():
+    def _pending_order_check(self, orders):
+        for key, ord in Order.current().items():                                    # ------------------------- Check !!!
             if ord.mine and ord.is_pending:
                 return True
         return False
@@ -106,16 +113,49 @@ class DSBot(Agent):
         self._pending_order = self._pending_order_check(orders)
 
         if not self._pending_order:
-            new_order = Order.create_new()
-            new_order.market = Market(self._public_market_id)
-            new_order.price = 500
-            new_order.units = 1
-            new_order.order_type = OrderType.LIMIT
-            new_order.order_side = OrderSide.SELL
-            new_order.ref = "test order"
-            self.send_order(new_order)
-            # Check to not break
-            self._pending_order = True
+            # Check if you are not waiting for pending action from the server
+            if not self._wait_for_server:
+                self.pro_active()
+
+    # A proactive bot call function
+    def pro_active(self):
+        print("Here 2")
+        # Store current incentive
+        prv_price = 0
+        #best_sell = MAX_SELL
+        #best_buy = MIN_BUY
+        for key, ord in Order.current().items():
+            if ord.is_private:
+                self._role = ord.order_side
+                prv_price = ord.price
+        
+        print("Here 3")
+        # Take one price and one type
+        self.send_one_order(prv_price)
+
+
+
+    def reactive(self):
+        pass
+
+    # Sends an order with specifications
+    def send_one_order(self, prv_price):
+        print("Here 4")
+        # Create a new order 
+        new_order = Order.create_new()
+        new_order.market = Market(self._public_market_id)
+        new_order.price = prv_price
+        new_order.units = 1
+        print("Here 5")
+        new_order.order_type = OrderType.LIMIT
+        new_order.order_side = self._role
+        new_order.ref = "test order"
+        self.send_order(new_order)
+        # Check to not break
+        print("Here 6")
+        self._pending_order = True
+        self._wait_for_server = True
+
         # This is a continuous loop, use it as outermost when making decisions?
         # Check async lecture
         print("\nThese are your current orders")
@@ -130,14 +170,9 @@ class DSBot(Agent):
         Order(20392599,Others,BUY,1@305,widget,LIMIT,REF:'buy-order')
         Order(20392629,Others,SELL,3@850,widget,LIMIT)
         """
+        print("Here 7")
         print("\nThis is your last traded?")    # Yes
         print(Order.trades()[0])
-
-    def proactive():
-        pass
-
-    def reactive():
-        pass
 
     def received_holdings(self, holdings):
 
@@ -152,21 +187,22 @@ class DSBot(Agent):
         self._cash_initial = holdings.cash_initial
         self._cash_avail = holdings.cash_available
         self._cash_settled = holdings.cash
+
         # Set widgets
-        for market, asset in holdings.asset.items():
+        for market, asset in holdings.assets.items():
             if market.private_market:
                 self._prv_widgets_initial = asset.units_initial
                 self._prv_widgets_avail = asset.units_available
-                self._prv_widgets_settled = asset.unit
+                self._prv_widgets_settled = asset.units
             else:
                 self._pub_widgets_initial = asset.units_initial
                 self._pub_widgets_avail = asset.units_available
-                self._pub_widgets_settled = asset.unit
+                self._pub_widgets_settled = asset.units
 
-        # print(f"I have holding cash {holdings.cash} and cash available {holdings.cash_available}")
+        print(f"I have holding cash {holdings.cash} and cash available {holdings.cash_available}")
         # print("Also")
-        # for market, asset in holdings.assets.items():
-        #    print(f"Assets settled {asset.units} and available {asset.units_available} for market {market}")
+        for market, asset in holdings.assets.items():
+            print(f"Assets settled {asset.units} and available {asset.units_available} for market {market}")
 
     def received_session_info(self, session: Session):
         pass
