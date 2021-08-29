@@ -1,5 +1,7 @@
 """
 This is a template for Project 1, Task 1 (Induced demand-supply)
+
+Developed by Prathyush Prashanth Rao - 1102225
 """
 
 from enum import Enum
@@ -10,7 +12,7 @@ from typing import List
 SUBMISSION = {"number": "1102225", "name": "Prathyush Prashanth Rao"}
 
 # ------ Add a variable called PROFIT_MARGIN -----
-PROFIT_MARGIn = 10
+PROFIT_MARGIN = 10
 
 
 # Enum for the roles of the bot
@@ -31,7 +33,8 @@ class DSBot(Agent):
         super().__init__(account, email, password, marketplace_id, name="DSBot")
         self._public_market_id = 0
         self._private_market_id = 0
-        self._role = None
+        self._role = None           # Buyer or seller
+        self._bot_type = None       # Proactive vs reactive
         # ------ Add new class variable _bot_type to store the type of the bot
 
     def role(self):
@@ -58,7 +61,10 @@ class DSBot(Agent):
         self.inform(f"I am a {self.role()} with profitable order {other_order}")
 
     def received_holdings(self, holdings):
-        pass
+        print(f"I have holding cash {holdings.cash} and cash available {holdings.cash_available}")
+        print("\nAlso\n")
+        for market, asset in holdings.assets.items():
+            print(f"Assets settled {asset.units} and available {asset.units_available} for market {market}")
 
     def received_session_info(self, session: Session):
         pass

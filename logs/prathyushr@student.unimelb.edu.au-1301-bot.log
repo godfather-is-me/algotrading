@@ -6,3 +6,28 @@
 [2021-08-28 19:51:49,595:         agent.DSBot]:     INFO - Session: SID:33486:SessionState.CLOSED
 [2021-08-28 19:54:56,882:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
 [2021-08-28 19:54:56,883:         agent.DSBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 12:00:12 India Standard Time] ===============================
+[2021-08-29 12:00:13,028:         agent.DSBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 12:00:18,358:         agent.DSBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 12:00:23,418:         agent.DSBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 12:00:24,798:         agent.DSBot]:     INFO - Session: SID:33767:SessionState.CLOSED
+[2021-08-29 12:00:55,437:         agent.DSBot]:     INFO - Session: SID:33767:SessionState.CLOSED
+[2021-08-29 12:02:01,582:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 12:02:01,582:         agent.DSBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 12:40:52 India Standard Time] ===============================
+[2021-08-29 12:40:52,696:         agent.DSBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 12:40:55,395:         agent.DSBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 12:41:01,419:         agent.DSBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 12:41:02,496:         agent.DSBot]:     INFO - Session: SID:33768:SessionState.OPEN
+[2021-08-29 12:45:12,285:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 12:45:12,285:         agent.DSBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 12:45:22 India Standard Time] ===============================
+[2021-08-29 12:45:22,289:         agent.DSBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 12:45:25,070:         agent.DSBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 12:45:27,629:         agent.DSBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 12:45:28,471:         agent.DSBot]:     INFO - Session: SID:33768:SessionState.OPEN
+[2021-08-29 12:45:59,305:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 12:45:59,305:         agent.DSBot]:     INFO - Shutting Down
