@@ -1,0 +1,8 @@
+
+=============================== Log Started [2021-08-28 19:51:41 India Standard Time] ===============================
+[2021-08-28 19:51:41,116:         agent.DSBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-28 19:51:43,284:         agent.DSBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-28 19:51:48,838:         agent.DSBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-28 19:51:49,595:         agent.DSBot]:     INFO - Session: SID:33486:SessionState.CLOSED
+[2021-08-28 19:54:56,882:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-28 19:54:56,883:         agent.DSBot]:     INFO - Shutting Down

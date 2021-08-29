@@ -7,9 +7,10 @@ from fmclient import Agent, OrderSide, Order, OrderType, Session
 from typing import List
 
 # Student details
-SUBMISSION = {"number": "123", "name": "Firstname Lastname"}
+SUBMISSION = {"number": "1102225", "name": "Prathyush Prashanth Rao"}
 
 # ------ Add a variable called PROFIT_MARGIN -----
+PROFIT_MARGIn = 10
 
 
 # Enum for the roles of the bot
@@ -37,7 +38,12 @@ class DSBot(Agent):
         return self._role
 
     def initialised(self):
-        pass
+        # Set private and public market IDs
+        for market_id, market in self.markets.items():
+            if market.private_market:
+                self._private_market_id = market_id
+            else:
+                self._public_market_id = market_id
 
     def order_accepted(self, order: Order):
         pass
@@ -65,7 +71,7 @@ if __name__ == "__main__":
     FM_ACCOUNT = "pollent-broker"
     FM_EMAIL = "prathyushr@student.unimelb.edu.au"
     FM_PASSWORD = "1102225"
-    MARKETPLACE_ID = 1293
+    MARKETPLACE_ID = 1301
 
     ds_bot = DSBot(FM_ACCOUNT, FM_EMAIL, FM_PASSWORD, MARKETPLACE_ID)
     ds_bot.run()
