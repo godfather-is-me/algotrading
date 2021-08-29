@@ -30,11 +30,14 @@ class BotType(Enum):
 class DSBot(Agent):
     # ------ Add an extra argument bot_type to the constructor -----
     def __init__(self, account, email, password, marketplace_id):
-        super().__init__(account, email, password, marketplace_id, name="DSBot")
+        super().__init__(account, email, password, marketplace_id, name="PratBot")
         self._public_market_id = 0
         self._private_market_id = 0
-        self._role = None           # Buyer or seller
-        self._bot_type = None       # Proactive vs reactive
+        self._role = None           # Buyer or seller ###
+        self._bot_type = None       # Proactive vs reactive ###
+        self._order_sent = False    # Execute only one order at a time
+        # Set intial cash, cash available, assets, assets available for both private and public
+
         # ------ Add new class variable _bot_type to store the type of the bot
 
     def role(self):
@@ -49,13 +52,18 @@ class DSBot(Agent):
                 self._public_market_id = market_id
 
     def order_accepted(self, order: Order):
-        pass
+        print(f"My order was accepted and the details are {order}")
 
     def order_rejected(self, info, order: Order):
-        pass
+        print(f"My order was rejected and the details of the order {order} are {info}")
 
     def received_orders(self, orders: List[Order]):
-        pass
+        print("Current order book is given by")
+        #Order.current = classmethod(Order.current)
+        #for i, ord in Order.current():
+        #    print(ord)
+        for o in orders:
+            print(o)
 
     def _print_trade_opportunity(self, other_order):
         self.inform(f"I am a {self.role()} with profitable order {other_order}")

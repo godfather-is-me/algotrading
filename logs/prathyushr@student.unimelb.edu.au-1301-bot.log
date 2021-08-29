@@ -31,3 +31,166 @@
 [2021-08-29 12:45:28,471:         agent.DSBot]:     INFO - Session: SID:33768:SessionState.OPEN
 [2021-08-29 12:45:59,305:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
 [2021-08-29 12:45:59,305:         agent.DSBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 12:53:24 India Standard Time] ===============================
+[2021-08-29 12:53:24,095:         agent.DSBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 12:53:26,365:         agent.DSBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 12:53:29,250:         agent.DSBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 12:53:30,307:         agent.DSBot]:     INFO - Session: SID:33769:SessionState.OPEN
+[2021-08-29 13:10:12,959:         agent.DSBot]:     INFO - Session: SID:33769:SessionState.PAUSED
+[2021-08-29 13:10:15,101:         agent.DSBot]:     INFO - Session: SID:33769:SessionState.CLOSED
+[2021-08-29 13:10:19,918:         agent.DSBot]:     INFO - Session: SID:33770:SessionState.OPEN
+[2021-08-29 13:30:22,643:         agent.DSBot]:     INFO - Session: SID:33770:SessionState.PAUSED
+[2021-08-29 13:30:24,992:         agent.DSBot]:     INFO - Session: SID:33770:SessionState.CLOSED
+[2021-08-29 13:30:29,975:         agent.DSBot]:     INFO - Session: SID:33771:SessionState.OPEN
+[2021-08-29 13:33:36,016:         agent.DSBot]:     INFO - Session: SID:33771:SessionState.OPEN
+[2021-08-29 13:50:32,674:         agent.DSBot]:     INFO - Session: SID:33771:SessionState.PAUSED
+[2021-08-29 13:50:34,903:         agent.DSBot]:     INFO - Session: SID:33771:SessionState.CLOSED
+[2021-08-29 13:50:39,659:         agent.DSBot]:     INFO - Session: SID:33772:SessionState.OPEN
+[2021-08-29 14:10:42,531:         agent.DSBot]:     INFO - Session: SID:33772:SessionState.PAUSED
+[2021-08-29 14:10:44,809:         agent.DSBot]:     INFO - Session: SID:33772:SessionState.CLOSED
+[2021-08-29 14:10:49,505:         agent.DSBot]:     INFO - Session: SID:33773:SessionState.OPEN
+[2021-08-29 14:30:52,563:         agent.DSBot]:     INFO - Session: SID:33773:SessionState.PAUSED
+[2021-08-29 14:30:54,395:         agent.DSBot]:     INFO - Session: SID:33773:SessionState.CLOSED
+[2021-08-29 14:30:59,426:         agent.DSBot]:     INFO - Session: SID:33774:SessionState.OPEN
+[2021-08-29 14:51:02,330:         agent.DSBot]:     INFO - Session: SID:33774:SessionState.PAUSED
+[2021-08-29 14:51:04,581:         agent.DSBot]:     INFO - Session: SID:33774:SessionState.CLOSED
+[2021-08-29 14:51:09,275:         agent.DSBot]:     INFO - Session: SID:33775:SessionState.OPEN
+[2021-08-29 16:12:25,159:         agent.DSBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:12:25,167:         agent.DSBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:19:11 India Standard Time] ===============================
+[2021-08-29 16:19:11,980:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:19:14,656:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:19:19,416:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:19:20,361:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:19:42,771:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:19:42,771:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+
+=============================== Log Started [2021-08-29 16:20:32 India Standard Time] ===============================
+[2021-08-29 16:20:32,077:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:20:34,499:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:20:37,047:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:20:38,039:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:20:38,055:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:20:38,055:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:20:38,357:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:43,033:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,478:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,478:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,478:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,486:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,582:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,582:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,590:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,590:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,590:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,694:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,694:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:46,694:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,713:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,713:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,713:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,721:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,721:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,721:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,833:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,840:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,844:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,844:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,961:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:20:56,961:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,319:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,408:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,408:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,512:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,512:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,520:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,520:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,528:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,528:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,624:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,624:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:06,624:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,543:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,551:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,551:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,559:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,559:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,567:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,688:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,688:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,688:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,695:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,783:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:16,783:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:21:22,391:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:21:22,391:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:22:37 India Standard Time] ===============================
+[2021-08-29 16:22:37,121:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:22:39,877:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:22:42,572:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:22:43,417:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:22:43,417:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:22:43,417:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:22:43,847:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,539:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,539:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,539:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,539:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,660:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,660:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,660:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,668:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,764:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,764:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,764:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:46,764:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:47,093:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,966:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,966:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,973:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,973:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,973:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,981:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,981:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,989:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,989:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,989:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:56,997:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:57,317:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:57,534:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:22:58,882:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:22:58,882:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:24:12 India Standard Time] ===============================
+[2021-08-29 16:24:12,865:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:24:15,209:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:24:18,167:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:24:19,250:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:24:19,250:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,603:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,611:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,611:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,708:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,715:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,715:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,715:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,804:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,804:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,811:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,908:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:26,908:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-29 16:24:36,010:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:24:36,018:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-29 16:24:59 India Standard Time] ===============================
+[2021-08-29 16:24:59,381:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-29 16:25:01,452:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-29 16:25:03,852:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-29 16:25:05,025:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:25:05,147:       agent.PratBot]:     INFO - Session: SID:33779:SessionState.OPEN
+[2021-08-29 16:25:05,147:       agent.PratBot]:    ERROR - Exception in DSBot.received_holdings() method. Run with DEBUG for details.
+[2021-08-29 16:25:38,658:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-29 16:25:38,666:       agent.PratBot]:     INFO - Shutting Down
