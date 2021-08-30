@@ -3274,3 +3274,6 @@ KeyboardInterrupt
 [2021-08-30 18:29:57,661:       agent.PratBot]:     INFO - Session: SID:33825:SessionState.OPEN
 [2021-08-30 18:29:59,210:       agent.PratBot]:     INFO - Session: SID:33825:SessionState.PAUSED
 [2021-08-30 18:30:01,361:       agent.PratBot]:     INFO - Session: SID:33825:SessionState.CLOSED
+[2021-08-30 19:02:35,319:       agent.PratBot]:     INFO - Session: SID:33825:SessionState.CLOSED
+[2021-08-30 19:09:12,974:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-30 19:09:12,974:       agent.PratBot]:     INFO - Shutting Down
