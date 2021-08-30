@@ -25,6 +25,7 @@ from fmclient import Agent, OrderSide, Order, OrderType, Session
 from typing import List
 
 from fmclient.data.orm.market import Market
+import copy
 
 
 # Student details

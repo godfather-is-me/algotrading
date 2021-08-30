@@ -19,6 +19,7 @@ from asyncio.windows_events import SelectorEventLoop
 from enum import Enum
 from fmclient import Agent, OrderSide, Order, OrderType, Session
 from typing import List
+import copy
 
 from fmclient.data.orm.market import Market
 
@@ -48,7 +49,7 @@ class DSBot(Agent):
         self._public_market_id = 0
         self._private_market_id = 0
         self._role = None                           # Buyer or seller from class
-        self._bot_type = BotType.PROACTIVE          # Proactive vs reactive (Proactive default for now)
+        self._bot_type = BotType.REACTIVE          # Proactive vs reactive (Proactive default for now)
         self._pending_order = False                 # Execute only one order at a time
         self._wait_for_server = False               # Wait for server response before commiting to another order
         self._pending_private = False               # Once public market order is executed, follow-up with private execution
@@ -105,6 +106,7 @@ class DSBot(Agent):
                 if not self._wait_for_server:
                     # Check if there has been a follow-up private market order
                     if not self._pending_private:
+                        print("here 1")
                         # Then use different proactive/reactive stances
                         if self._bot_type == BotType.PROACTIVE:
                             self.proactive_bot()
@@ -116,33 +118,49 @@ class DSBot(Agent):
                         self._pending_private = False
         
             # Check if incentives refreshed
+            # print(" HEre -1")
+            self.refresh_incentive()
+            # Remove reactive bot order if it reacted too late
             for key, ord in Order.current().items():
-                if ord.is_private:
-                    # Incentives have changed
-                    if ord.price != self._incentive_price or ord.order_side != self._incentive_side:
-                        self._incentive_changed = True
-                        self._incentive_price = ord.price
-                        self._incentive_side = ord.order_side
-                        break
-            if self._incentive_changed:
-                # Cancel all my old orders, including old private orders
-                self._incentive_changed = False
-                for key, ord in Order.current().items():
-                    if ord.mine:
-                        self.send_cancel_order(ord)
+                if ord.mine:
+                    self.send_cancel_order(ord)
+                    break
         else:
-            # Initial incentive laod
+            self.initial_incentive()
+
+    # To load all the initial incentives for the reactive/proactive bot to function
+    def initial_incentive(self):
+        # Initial incentive laod
+        for key, ord in Order.current().items():
+            if ord.mine:
+                self.send_cancel_order(ord)
+            elif ord.is_private:
+                if ord.price != self._incentive_price or ord.order_side != self._incentive_side:
+                    # self._incentive_changed = True
+                    self._incentive_price = ord.price
+                    self._incentive_side = ord.order_side
+                    # print(f"Ord price and ord incentive is {ord.price} and {ord.order_side}")
+                    self._incentive_load = True
+                    break
+            # No incentives found just yet (if entering in the middle of the session)
+            print("No incentives yet")
+
+    # Check if incentives have changed and refresh code accordingly
+    def refresh_incentive(self):
+        for key, ord in Order.current().items():
+            if ord.is_private:
+                # Incentives have changed
+                if ord.price != self._incentive_price or ord.order_side != self._incentive_side:
+                    self._incentive_changed = True
+                    self._incentive_price = ord.price
+                    self._incentive_side = ord.order_side
+                    break
+        if self._incentive_changed:
+            # Cancel all my old orders, including old private orders
+            self._incentive_changed = False
             for key, ord in Order.current().items():
-                if ord.is_private:
-                    # Incentives have changed
-                    if ord.price != self._incentive_price or ord.order_side != self._incentive_side:
-                        # self._incentive_changed = True
-                        self._incentive_price = ord.price
-                        self._incentive_side = ord.order_side
-                        # print(f"Ord price and ord incentive is {ord.price} and {ord.order_side}")
-                        self._incentive_load = True
-                        break
-                print("No incentives yet")                                          # ------------------------ check
+                if ord.mine:
+                    self.send_cancel_order(ord)
 
     def received_holdings(self, holdings):
         # Implement session change check, to reinitialize all boolean variables 
@@ -218,49 +236,46 @@ class DSBot(Agent):
 
     # A reactive style bot that sends orders based on the actions in the market
     def reactive_bot(self):
-        """ Note! I will be doing it with local incentives for now just to make it easier to debug the overall page is issues persist"""
-        
-        # Local vars
-        pvr_exist = False
-        pvr_side = None
-        pvr_price = 0
+        prv_exist = False
         # Bring buy down while bringing sell high using out of bound numbers
-        buy_min = 11
-        sell_max = -1
+        # Find the highest buy to sell to, and the lowest sell to buy to long as they are profitable
+        buy_high = -1
+        sell_low = 11
 
         # Collect data to make reactive orders
         for key, ord in Order.current().items():
             if ord.is_private:
-                pvr_exist = True
-                pvr_side = ord.order_side
-                pvr_price = ord.price
+                prv_exist = True
             else:
                 if ord.order_side == OrderSide.BUY:
-                    if ord.price < buy_min:
-                        buy_min = ord.price
+                    if ord.price > buy_high:
+                        buy_high = ord.price
                 else: 
-                    if ord.price > sell_max:
-                        sell_max = ord.price
+                    if ord.price < sell_low:
+                        sell_low = ord.price
     
-        if pvr_exist:
-            trade_price = self.reactive_price(pvr_side, buy_min, sell_max, pvr_price)
+        if prv_exist:
+            print("In prv reactive bot")
+            trade_price = self.reactive_price(self._incentive_side, buy_high, sell_low, self._incentive_price)
+            print(trade_price)
             if trade_price:
                 # Create public market order
-                self.send_public_order(pvr_side, trade_price)
+                self.send_public_order(self._incentive_side, trade_price)
                 self._pending_private = True
 
     # A check function to see whether a valid price exists for the bot to react to
-    def reactive_price(self, side, buy_min, sell_max, price):
+    def reactive_price(self, side, buy_high, sell_low, price):
         # Public market only
         if side == OrderSide.BUY:
             # No buy order exists
-            if not(buy_min > price):
-                if buy_min > self._cash_avail:
-                    return buy_min
+            if sell_low < price:
+                if sell_low > self._cash_avail:
+                    return sell_low
         else:
-            if not(sell_max < price):
+            print(f"buy high {buy_high}")
+            if buy_high > price:
                 if self._pub_widgets_avail > 0:
-                    return sell_max
+                    return buy_high
         # No profitable trade available
         return False
 

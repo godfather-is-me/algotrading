@@ -23,6 +23,7 @@ MAX_SELL = 1000
 # Define goals - it is the equation they gave
 
 
+
 # The need for current orders is still vague. (One thing used is to check whether your order is in the system or not)
     # If possible, understand the minimum selling price, maximum buying price and if opportunity exists within both execute at that point, else just place order and wait for reaction
 
