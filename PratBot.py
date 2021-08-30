@@ -6,11 +6,8 @@ Developed by Prathyush Prashanth Rao - 1102225
 ----
 TODO
 
-# Define goals - it is the equation they gave
 # Use print_trade_opportunity like a switch statement and use if statements in the super method to clarify reasoning
 
-LEARNT
-# received_holdings keeps upadating with every change in the market
 
 """
 
@@ -49,7 +46,7 @@ class DSBot(Agent):
         self._public_market_id = 0
         self._private_market_id = 0
         self._role = None                           # Buyer or seller from class
-        self._bot_type = BotType.REACTIVE          # Proactive vs reactive (Proactive default for now)
+        self._bot_type = BotType.REACTIVE           # Proactive vs reactive (Proactive default for now)
         self._pending_order = False                 # Execute only one order at a time
         self._wait_for_server = False               # Wait for server response before commiting to another order
         self._pending_private = False               # Once public market order is executed, follow-up with private execution
@@ -118,7 +115,6 @@ class DSBot(Agent):
                         self._pending_private = False
         
             # Check if incentives refreshed
-            # print(" HEre -1")
             self.refresh_incentive()
             # Remove reactive bot order if it reacted too late
             for key, ord in Order.current().items():
@@ -139,8 +135,12 @@ class DSBot(Agent):
                     # self._incentive_changed = True
                     self._incentive_price = ord.price
                     self._incentive_side = ord.order_side
-                    # print(f"Ord price and ord incentive is {ord.price} and {ord.order_side}")
                     self._incentive_load = True
+                    # Update role of the bot according to incentive
+                    if ord.order_side == OrderSide.BUY:
+                        self._role = Role.BUYER
+                    else:
+                        self.role = Role.SELLER
                     break
             # No incentives found just yet (if entering in the middle of the session)
             print("No incentives yet")
@@ -154,6 +154,11 @@ class DSBot(Agent):
                     self._incentive_changed = True
                     self._incentive_price = ord.price
                     self._incentive_side = ord.order_side
+                    # Update role of the bot according to incentive
+                    if ord.order_side == OrderSide.BUY:
+                        self._role = Role.BUYER
+                    else:
+                        self.role = Role.SELLER
                     break
         if self._incentive_changed:
             # Cancel all my old orders, including old private orders
@@ -161,40 +166,6 @@ class DSBot(Agent):
             for key, ord in Order.current().items():
                 if ord.mine:
                     self.send_cancel_order(ord)
-
-    def received_holdings(self, holdings):
-        # Implement session change check, to reinitialize all boolean variables 
-        if not (self._cash_initial == holdings.cash_initial):
-            # Check for private and public initial widgets too
-            # If check is true, cancel all previous orders and restart pending orders to false
-            pass
-
-        # Set cash
-        self._cash_initial = holdings.cash_initial
-        self._cash_avail = holdings.cash_available
-        self._cash_settled = holdings.cash
-
-        # Set widgets
-        for market, asset in holdings.assets.items():
-            if market.private_market:
-                self._prv_widgets_initial = asset.units_initial
-                self._prv_widgets_avail = asset.units_available
-                self._prv_widgets_settled = asset.units
-            else:
-                self._pub_widgets_initial = asset.units_initial
-                self._pub_widgets_avail = asset.units_available
-                self._pub_widgets_settled = asset.units
-
-        print(f"I have holding cash {holdings.cash} and cash available {holdings.cash_available}")
-        # print("Also")
-        for market, asset in holdings.assets.items():
-            print(f"Assets settled {asset.units} and available {asset.units_available} for market {market}")
-
-    def received_session_info(self, session: Session):
-        pass
-
-    def pre_start_tasks(self):
-        pass
 
     # Returns boolean value if pending order exists (only 1 order at a time)
     def _pending_order_check(self, orders):
@@ -268,12 +239,11 @@ class DSBot(Agent):
         # Public market only
         if side == OrderSide.BUY:
             # No buy order exists
-            if sell_low < price:
+            if (sell_low + PROFIT_MARGIN) < price:
                 if sell_low > self._cash_avail:
                     return sell_low
         else:
-            print(f"buy high {buy_high}")
-            if buy_high > price:
+            if (buy_high + PROFIT_MARGIN) > price:
                 if self._pub_widgets_avail > 0:
                     return buy_high
         # No profitable trade available
@@ -355,6 +325,40 @@ class DSBot(Agent):
         cancel_order.order_type = OrderType.CANCEL
         cancel_order.ref = "Cancelled due to async or incentive change"
         self.send_order(cancel_order)
+
+    def received_holdings(self, holdings):
+        # Implement session change check, to reinitialize all boolean variables 
+        if not (self._cash_initial == holdings.cash_initial):
+            # Check for private and public initial widgets too
+            # If check is true, cancel all previous orders and restart pending orders to false
+            pass
+
+        # Set cash
+        self._cash_initial = holdings.cash_initial
+        self._cash_avail = holdings.cash_available
+        self._cash_settled = holdings.cash
+
+        # Set widgets
+        for market, asset in holdings.assets.items():
+            if market.private_market:
+                self._prv_widgets_initial = asset.units_initial
+                self._prv_widgets_avail = asset.units_available
+                self._prv_widgets_settled = asset.units
+            else:
+                self._pub_widgets_initial = asset.units_initial
+                self._pub_widgets_avail = asset.units_available
+                self._pub_widgets_settled = asset.units
+
+        print(f"I have holding cash {holdings.cash} and cash available {holdings.cash_available}")
+        # print("Also")
+        for market, asset in holdings.assets.items():
+            print(f"Assets settled {asset.units} and available {asset.units_available} for market {market}")
+
+    def received_session_info(self, session: Session):
+        pass
+
+    def pre_start_tasks(self):
+        pass
 
 if __name__ == "__main__":
     FM_ACCOUNT = "pollent-broker"
