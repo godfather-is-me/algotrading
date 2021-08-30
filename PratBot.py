@@ -103,7 +103,6 @@ class DSBot(Agent):
                 if not self._wait_for_server:
                     # Check if there has been a follow-up private market order
                     if not self._pending_private:
-                        print("here 1")
                         # Then use different proactive/reactive stances
                         if self._bot_type == BotType.PROACTIVE:
                             self.proactive_bot()
@@ -113,14 +112,14 @@ class DSBot(Agent):
                         self.send_private_order(self._incentive_side, self._incentive_price)
                         # Private order executed
                         self._pending_private = False
-        
             # Check if incentives refreshed
             self.refresh_incentive()
             # Remove reactive bot order if it reacted too late
-            for key, ord in Order.current().items():
-                if ord.mine:
-                    self.send_cancel_order(ord)
-                    break
+            if self._bot_type == BotType.REACTIVE:
+                for key, ord in Order.current().items():
+                    if ord.mine:
+                        self.send_cancel_order(ord)
+                        break
         else:
             self.initial_incentive()
 
@@ -143,7 +142,7 @@ class DSBot(Agent):
                         self.role = Role.SELLER
                     break
             # No incentives found just yet (if entering in the middle of the session)
-            print("No incentives yet")
+            # print("No incentives yet")
 
     # Check if incentives have changed and refresh code accordingly
     def refresh_incentive(self):
@@ -162,10 +161,10 @@ class DSBot(Agent):
                     break
         if self._incentive_changed:
             # Cancel all my old orders, including old private orders
-            self._incentive_changed = False
             for key, ord in Order.current().items():
                 if ord.mine:
                     self.send_cancel_order(ord)
+            self._incentive_changed = False
 
     # Returns boolean value if pending order exists (only 1 order at a time)
     def _pending_order_check(self, orders):
@@ -181,18 +180,19 @@ class DSBot(Agent):
         for key, ord in Order.current().items():
             if ord.is_private:
                 prv_exist = True
+                #self._print_trade_opportunity(ord)
                 break
         
         # If private orders do exist
         if prv_exist:
             # Check order here
-            if self.order_check(self._incentive_side, self.proactive_price(self._incentive_side, self._incentive_price), False):
-                # Test for public and that should automatically allow for private testing
+            if self.order_check(self._incentive_side, self.proactive_price(self._incentive_side, self._incentive_price)):
+                # When testing and successfully fulfilling order from public market if you have what is required for the private market
                 self.send_public_order(self._incentive_side, self.proactive_price(self._incentive_side, self._incentive_price))
-                # print(f"Value we are going for is {self.proactive_price(self._incentive_side, self._incentive_price)} where prev_price is {self._incentive_price} and prev side is {self._incentive_side}")
+                # Next step is the private market order
                 self._pending_private = True
                 
-    # If the private order is buy, buy lower in public. For sell, sell higher in public and buy private
+    # Private buy order, aim to buy lower in the public market. For sell orders, aim higher.
     def proactive_price(self, side, price):
         if side == OrderSide.BUY:
             if ((price - PROFIT_MARGIN) >= MIN_BUY):
@@ -226,9 +226,7 @@ class DSBot(Agent):
                         sell_low = ord.price
     
         if prv_exist:
-            print("In prv reactive bot")
             trade_price = self.reactive_price(self._incentive_side, buy_high, sell_low, self._incentive_price)
-            print(trade_price)
             if trade_price:
                 # Create public market order
                 self.send_public_order(self._incentive_side, trade_price)
@@ -250,32 +248,19 @@ class DSBot(Agent):
         return False
 
     # Function to check whether order can be possible or not
-    def order_check(self, price, side, private = False):
-        if private:
-            # Manager wants to buy, which means the user will sell to react to the order
-            if side == OrderSide.BUY:
-                # Check if possible for the user (selling private widgets)
-                if self._prv_widgets_avail > 0:
-                    return True
-                else:
-                    return False
+    def order_check(self, price, side):
+        # Here the user is buying orders from the public market (Therefore requires cash to buy)
+        if side == OrderSide.BUY:
+            if self._cash_avail >= price:
+                return True
             else:
-                if self._cash_avail >= price:
-                    return True
-                else:
-                    return False
+                return False
         else:
-            # Here the user is buying orders from the public market (Therefore requires cash to buy)
-            if side == OrderSide.BUY:
-                if self._cash_avail >= price:
-                    return True
-                else:
-                    return False
+            # Check for sell orders
+            if self._pub_widgets_avail > 0:
+                return True
             else:
-                if self._pub_widgets_avail > 0:
-                    return True
-                else:
-                    return False
+                return False
 
     # Function to send a specified order to the public market
     def send_public_order(self, side, price):
@@ -334,23 +319,17 @@ class DSBot(Agent):
             pass
 
         # Set cash
-        self._cash_initial = holdings.cash_initial
         self._cash_avail = holdings.cash_available
-        self._cash_settled = holdings.cash
 
         # Set widgets
         for market, asset in holdings.assets.items():
             if market.private_market:
-                self._prv_widgets_initial = asset.units_initial
                 self._prv_widgets_avail = asset.units_available
-                self._prv_widgets_settled = asset.units
             else:
-                self._pub_widgets_initial = asset.units_initial
                 self._pub_widgets_avail = asset.units_available
-                self._pub_widgets_settled = asset.units
+
 
         print(f"I have holding cash {holdings.cash} and cash available {holdings.cash_available}")
-        # print("Also")
         for market, asset in holdings.assets.items():
             print(f"Assets settled {asset.units} and available {asset.units_available} for market {market}")
 
