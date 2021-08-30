@@ -56,9 +56,9 @@ class DSBot(Agent):
         super().__init__(account, email, password, marketplace_id, name="PratBot")
         self._public_market_id = 0
         self._private_market_id = 0
-        self._role = None               # Buyer or seller
-        self._bot_type = None           # Proactive vs reactive
-        self._pending_order = False    # Execute only one order at a time
+        self._role = None                           # Buyer or seller
+        self._bot_type = BotType.PROACTIVE          # Proactive vs reactive
+        self._pending_order = False                 # Execute only one order at a time
         self._wait_for_server = False
         self._wait_for_public = False
         ## Restrictive check vars
@@ -116,29 +116,46 @@ class DSBot(Agent):
         if not self._pending_order:
             # Check if you are not waiting for pending action from the server
             if not self._wait_for_server:
-                self.proactive()
+                if self._bot_type == BotType.PROACTIVE:
+                    self.proactive()
+                else:
+                    self.reactive()
 
     # A proactive bot call function
     def proactive(self):
         # print proactive logic
+        # change price
+        # check for availibility
         # Store current incentive
         prv_price = 0
+        prv_side = None
         #best_sell = MAX_SELL
         #best_buy = MIN_BUY
         for key, ord in Order.current().items():
             if ord.is_private and ord.is_pending:
-                self._role = ord.order_side
+                prv_side = ord.order_side
                 prv_price = ord.price
         
         # Take one price and one type
-        self.send_public_order(prv_price)
+        self.send_public_order(prv_side, self.proactive_price(ord.order_side, prv_price))
+        self.send_private_order(prv_side, prv_price)
         
-
+    def proactive_price(self, order_side, prv_price):
+        if order_side == OrderSide.BUY:
+            if (prv_price - PROFIT_MARGIN) >= MIN_BUY:
+                return prv_price  - PROFIT_MARGIN
+            else:
+                return MIN_BUY
+        else:
+            if (prv_price + PROFIT_MARGIN) <= MAX_SELL:
+                return prv_price + PROFIT_MARGIN
+            else:
+                return MAX_SELL
 
     def reactive(self):
         pass
 
-    def send_private_order(self, price):
+    def send_private_order(self, side, price):
         new_order = Order.create_new()
 
         new_order.market = Market(self._private_market_id)
@@ -146,19 +163,19 @@ class DSBot(Agent):
         new_order.units = 1
 
         new_order.order_type = OrderType.LIMIT
-        if self._role == OrderSide.BUY:
+        if side == OrderSide.BUY:
             new_order.order_side = OrderSide.SELL
         else:
             new_order.order_side = OrderSide.BUY
-        new_order.ref = f"Private {self._role} for 1@{price}"
-        self.owner_or_target = "M000"
+        new_order.ref = f"Private {side} for 1@{price}"
+        new_order.owner_or_target = "M000"
         self.send_order(new_order)
         # Check to not break
         self._pending_order = True
         self._wait_for_server = True
 
     # Sends an order with specifications
-    def send_public_order(self, price):
+    def send_public_order(self, side, price):
         # Create a new order 
         new_order = Order.create_new()
 
@@ -167,8 +184,8 @@ class DSBot(Agent):
         new_order.units = 1
 
         new_order.order_type = OrderType.LIMIT
-        new_order.order_side = self._role
-        new_order.ref = f"Public {self._role} for 1@{price}"
+        new_order.order_side = side
+        new_order.ref = f"Public {side} for 1@{price}"
         self.send_order(new_order)
         # Check to not break
         self._pending_order = True
