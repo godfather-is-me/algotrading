@@ -41,32 +41,27 @@ class BotType(Enum):
 
 class DSBot(Agent):
     # ------ Add an extra argument bot_type to the constructor -----
-    def __init__(self, account, email, password, marketplace_id):
+    def __init__(self, account, email, password, marketplace_id, bot_type):
         super().__init__(account, email, password, marketplace_id, name="PratBot")
         self._public_market_id = 0
         self._private_market_id = 0
         self._role = None                           # Buyer or seller from class
-        self._bot_type = BotType.REACTIVE           # Proactive vs reactive (Proactive default for now)
+        self._bot_type = bot_type                   # Proactive vs reactive (Proactive default for now)
         self._pending_order = False                 # Execute only one order at a time
         self._wait_for_server = False               # Wait for server response before commiting to another order
         self._pending_private = False               # Once public market order is executed, follow-up with private execution
-        ## Restrictive check vars
-        # Set intial cash and widgets for both public and private markets
-        self._cash_initial = None
-        self._pub_widgets_initial = None
-        self._prv_widgets_initial = None
+        ## Restrictive checks
         # Assets and cash - settled and available
-        self._cash_settled = None
         self._cash_avail = None
-        self._pub_widgets_settled = None
         self._pub_widgets_avail = None
-        self._prv_widgets_settled = None
         self._prv_widgets_avail = None
         # Old incentives to compare when refreshed
         self._incentive_price = 0
         self._incentive_side = None
         self._incentive_changed = False
         self._incentive_load = False
+        # Collects a list of opportunities that could be analyzed
+        self._opportunity = {}
 
     def role(self):
         return self._role
@@ -91,8 +86,43 @@ class DSBot(Agent):
         self._wait_for_server = False
 
     # All trade opportunities seen before confirming the order
-    def _print_trade_opportunity(self, other_order):
-        self.inform(f"I am a {self.role()} with profitable order {other_order}")
+    def _print_trade_opportunity(self):
+        # Initialisations
+        available_cash = self._cash_avail
+        if 'trade_price' in self._oppportunity.keys():
+            available_cash += self._oppportunity['trade_price']
+        if 'private' in self._oppportunity.keys():
+            print(f"I am a {self.role()} driven by the private incentive {self._oppportunity['private']}")
+        
+        # Check constraints and availability
+        def check_constraints(order):
+            if order.order_side == OrderSide.BUY:
+                if order.price > available_cash:
+                    return False
+            else:
+                if self._pub_widgets_avail <= 0:
+                    return False
+            return True
+
+        # Check profitability
+        def profitability(order):
+            # If > 0, profitable
+            return  order.price - self._oppportunity['private'].price
+
+        # For all reactive bots that were possible
+        for key, value in self._oppportunity.items():
+            # Skip private key
+            if key == 'private' or key == 'trade_place':
+                continue
+            if check_constraints(value):
+                # It did not get executed because it was not the best bid/ask
+                print(f"The {self.role()} order with {value} was a possible outcome with a profitability of {profitability(value)}")
+            else:
+                print(f"The {self.role()} order with {value} did not have sufficient resources")
+        
+        # Best bid/ask
+        if self._oppportunity['trade_price']:
+            print(f"The best {self._incentive_side} traded at {self._oppportunity['trade_price']}")
 
     # Orders received by the server, holds order book
     def received_orders(self, orders: List[Order]):
@@ -117,7 +147,7 @@ class DSBot(Agent):
             # Remove reactive bot order if it reacted too late
             if self._bot_type == BotType.REACTIVE:
                 for key, ord in Order.current().items():
-                    if ord.mine:
+                    if ord.mine and ord.is_pending:
                         self.send_cancel_order(ord)
                         break
         else:
@@ -127,7 +157,7 @@ class DSBot(Agent):
     def initial_incentive(self):
         # Initial incentive laod
         for key, ord in Order.current().items():
-            if ord.mine:
+            if ord.mine and ord.is_pending:
                 self.send_cancel_order(ord)
             elif ord.is_private:
                 if ord.price != self._incentive_price or ord.order_side != self._incentive_side:
@@ -162,7 +192,7 @@ class DSBot(Agent):
         if self._incentive_changed:
             # Cancel all my old orders, including old private orders
             for key, ord in Order.current().items():
-                if ord.mine:
+                if ord.mine and ord.is_pending:
                     self.send_cancel_order(ord)
             self._incentive_changed = False
 
@@ -217,20 +247,26 @@ class DSBot(Agent):
         for key, ord in Order.current().items():
             if ord.is_private:
                 prv_exist = True
+                self._opportunity['private'] = ord
             else:
                 if ord.order_side == OrderSide.BUY:
                     if ord.price > buy_high:
                         buy_high = ord.price
+                        self._opportunity[ord.price] = ord
                 else: 
                     if ord.price < sell_low:
                         sell_low = ord.price
-    
+                        self._opportunity[ord.price] = ord
+
         if prv_exist:
             trade_price = self.reactive_price(self._incentive_side, buy_high, sell_low, self._incentive_price)
             if trade_price:
                 # Create public market order
                 self.send_public_order(self._incentive_side, trade_price)
                 self._pending_private = True
+                self._opportunity['trade_price'] = trade_price
+                # To reduce hinderance with the reactive bot and increase it's speed, all trades were stored and explained later
+                # self._print_trade_opportunity()
 
     # A check function to see whether a valid price exists for the bot to react to
     def reactive_price(self, side, buy_high, sell_low, price):
@@ -313,10 +349,10 @@ class DSBot(Agent):
 
     def received_holdings(self, holdings):
         # Implement session change check, to reinitialize all boolean variables 
-        if not (self._cash_initial == holdings.cash_initial):
+        # if not (self._cash_initial == holdings.cash_initial):
             # Check for private and public initial widgets too
             # If check is true, cancel all previous orders and restart pending orders to false
-            pass
+        #    pass
 
         # Set cash
         self._cash_avail = holdings.cash_available
@@ -344,6 +380,7 @@ if __name__ == "__main__":
     FM_EMAIL = "prathyushr@student.unimelb.edu.au"
     FM_PASSWORD = "1102225"
     MARKETPLACE_ID = 1301
+    BOT_TYPE = BotType.REACTIVE
 
-    ds_bot = DSBot(FM_ACCOUNT, FM_EMAIL, FM_PASSWORD, MARKETPLACE_ID)
+    ds_bot = DSBot(FM_ACCOUNT, FM_EMAIL, FM_PASSWORD, MARKETPLACE_ID, BOT_TYPE)
     ds_bot.run()
