@@ -7,7 +7,6 @@ Developed by Prathyush Prashanth Rao - 1102225
 TODO
 
 # Define goals - it is the equation they gave
-#### Make send order function with buy/sell and price params
 # Use print_trade_opportunity like a switch statement and use if statements in the super method to clarify reasoning
 
 LEARNT
@@ -83,7 +82,6 @@ class DSBot(Agent):
             else:
                 self._public_market_id = market_id
         
-
     # Outcome message when order has been accepted into the market
     def order_accepted(self, order: Order):
         print(f"\nOrder ACCEPTED with the details - {order}")
@@ -100,10 +98,12 @@ class DSBot(Agent):
 
     # Orders received by the server, holds order book
     def received_orders(self, orders: List[Order]):
-        # Initial incentives loading
+        # Initial incentives loading - without which the code won't run
         if self._incentive_load:
+            # Check if an order exists in the public market
             if not self._pending_order_check(orders):
                 if not self._wait_for_server:
+                    # Check if there has been a follow-up private market order
                     if not self._pending_private:
                         # Then use different proactive/reactive stances
                         if self._bot_type == BotType.PROACTIVE:
@@ -111,13 +111,10 @@ class DSBot(Agent):
                         else:
                             self.reactive_bot()
                     else:
-                        if self._bot_type == BotType.PROACTIVE:
-                            self.send_private_order(self._incentive_side, self._incentive_price)
-                            # Private order executed
-                            self._pending_private = False
-                        else:
-                            pass
-            
+                        self.send_private_order(self._incentive_side, self._incentive_price)
+                        # Private order executed
+                        self._pending_private = False
+        
             # Check if incentives refreshed
             for key, ord in Order.current().items():
                 if ord.is_private:
@@ -128,7 +125,7 @@ class DSBot(Agent):
                         self._incentive_side = ord.order_side
                         break
             if self._incentive_changed:
-                # Cancel all my old orders
+                # Cancel all my old orders, including old private orders
                 self._incentive_changed = False
                 for key, ord in Order.current().items():
                     if ord.mine:
@@ -145,14 +142,13 @@ class DSBot(Agent):
                         # print(f"Ord price and ord incentive is {ord.price} and {ord.order_side}")
                         self._incentive_load = True
                         break
-                print("None have private")
+                print("No incentives yet")                                          # ------------------------ check
 
     def received_holdings(self, holdings):
-        # Implement session change check, to reinitialize all boolean variables                             ------------
+        # Implement session change check, to reinitialize all boolean variables 
         if not (self._cash_initial == holdings.cash_initial):
             # Check for private and public initial widgets too
-            # If check is true, restart pending orders to false
-            # Cancel all previous orders
+            # If check is true, cancel all previous orders and restart pending orders to false
             pass
 
         # Set cash
@@ -192,21 +188,17 @@ class DSBot(Agent):
     # A proactive style bot that sends orders to bring liquidity into the market
     def proactive_bot(self):
         # Proactive bot to set itself based on the private market
-        print("Here 1")
         prv_exist = False
         for key, ord in Order.current().items():
             if ord.is_private:
                 prv_exist = True
                 break
         
-        print("Here 2")
         # If private orders do exist
         if prv_exist:
             # Check order here
-            print("Here 3")
             if self.order_check(self._incentive_side, self.proactive_price(self._incentive_side, self._incentive_price), False):
                 # Test for public and that should automatically allow for private testing
-                print("Here 4")
                 self.send_public_order(self._incentive_side, self.proactive_price(self._incentive_side, self._incentive_price))
                 # print(f"Value we are going for is {self.proactive_price(self._incentive_side, self._incentive_price)} where prev_price is {self._incentive_price} and prev side is {self._incentive_side}")
                 self._pending_private = True
@@ -226,7 +218,51 @@ class DSBot(Agent):
 
     # A reactive style bot that sends orders based on the actions in the market
     def reactive_bot(self):
-        pass
+        """ Note! I will be doing it with local incentives for now just to make it easier to debug the overall page is issues persist"""
+        
+        # Local vars
+        pvr_exist = False
+        pvr_side = None
+        pvr_price = 0
+        # Bring buy down while bringing sell high using out of bound numbers
+        buy_min = 11
+        sell_max = -1
+
+        # Collect data to make reactive orders
+        for key, ord in Order.current().items():
+            if ord.is_private:
+                pvr_exist = True
+                pvr_side = ord.order_side
+                pvr_price = ord.price
+            else:
+                if ord.order_side == OrderSide.BUY:
+                    if ord.price < buy_min:
+                        buy_min = ord.price
+                else: 
+                    if ord.price > sell_max:
+                        sell_max = ord.price
+    
+        if pvr_exist:
+            trade_price = self.reactive_price(pvr_side, buy_min, sell_max, pvr_price)
+            if trade_price:
+                # Create public market order
+                self.send_public_order(pvr_side, trade_price)
+                self._pending_private = True
+
+    # A check function to see whether a valid price exists for the bot to react to
+    def reactive_price(self, side, buy_min, sell_max, price):
+        # Public market only
+        if side == OrderSide.BUY:
+            # No buy order exists
+            if not(buy_min > price):
+                if buy_min > self._cash_avail:
+                    return buy_min
+        else:
+            if not(sell_max < price):
+                if self._pub_widgets_avail > 0:
+                    return sell_max
+        # No profitable trade available
+        return False
 
     # Function to check whether order can be possible or not
     def order_check(self, price, side, private = False):
@@ -234,30 +270,29 @@ class DSBot(Agent):
             # Manager wants to buy, which means the user will sell to react to the order
             if side == OrderSide.BUY:
                 # Check if possible for the user (selling private widgets)
-                if self._prv_widgets_avail >= 0:
+                if self._prv_widgets_avail > 0:
                     return True
                 else:
                     return False
             else:
-                if (self._cash_avail - price) >= 0:
+                if self._cash_avail >= price:
                     return True
                 else:
                     return False
         else:
             # Here the user is buying orders from the public market (Therefore requires cash to buy)
             if side == OrderSide.BUY:
-                if (self._cash_avail - price) >= 0:
+                if self._cash_avail >= price:
                     return True
                 else:
                     return False
             else:
-                if self._pub_widgets_avail >= 0:
+                if self._pub_widgets_avail > 0:
                     return True
                 else:
                     return False
 
-        pass
-
+    # Function to send a specified order to the public market
     def send_public_order(self, side, price):
         # Create a new order object
         new_order = Order.create_new()
@@ -275,6 +310,7 @@ class DSBot(Agent):
         # Wait for server to respond
         self._wait_for_server = True
 
+    # Function to send a specified order to the private market
     def send_private_order(self, side, price):
         # Create a new order object
         new_order = Order.create_new()
@@ -298,8 +334,7 @@ class DSBot(Agent):
         # Waiting for the server to repsond
         self._wait_for_server = True
 
-    # Cancel order if private order does not go through
-    # Cancel order if incentives change
+    # Cancel order if private order does not go through or incentives change
     def send_cancel_order(self, order):
         cancel_order = copy.copy(order)
         cancel_order.order_type = OrderType.CANCEL
