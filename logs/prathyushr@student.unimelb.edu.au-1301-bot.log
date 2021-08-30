@@ -1686,3 +1686,32 @@
 [2021-08-30 05:13:38,000:       agent.PratBot]:     INFO - Session: SID:33791:SessionState.OPEN
 [2021-08-30 05:14:19,385:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
 [2021-08-30 05:14:19,385:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-30 05:28:43 India Standard Time] ===============================
+[2021-08-30 05:28:43,846:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-30 05:28:46,174:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-30 05:28:49,017:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-30 05:28:50,095:       agent.PratBot]:     INFO - Session: SID:33791:SessionState.OPEN
+[2021-08-30 05:28:50,573:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,057:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,057:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,063:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,161:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,164:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,167:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,169:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,172:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,294:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,298:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,300:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:53,302:       agent.PratBot]:    ERROR - Exception in DSBot.received_orders() method. Run with DEBUG for details.
+[2021-08-30 05:28:59,516:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-30 05:28:59,517:       agent.PratBot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-08-30 05:30:43 India Standard Time] ===============================
+[2021-08-30 05:30:43,988:       agent.PratBot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-08-30 05:30:46,406:       agent.PratBot]:     INFO - Requesting initial information for marketplace `1301`
+[2021-08-30 05:30:48,946:       agent.PratBot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-08-30 05:30:49,798:       agent.PratBot]:     INFO - Session: SID:33792:SessionState.OPEN
+[2021-08-30 05:33:46,503:       agent.PratBot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-08-30 05:33:46,503:       agent.PratBot]:     INFO - Shutting Down

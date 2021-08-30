@@ -61,6 +61,7 @@ class DSBot(Agent):
         self._pending_order = False    # Execute only one order at a time
         self._wait_for_server = False
         self._wait_for_public = False
+        ## Restrictive check vars
         # Set intial cash and widgets for both public and private markets
         self._cash_initial = None
         self._pub_widgets_initial = None
@@ -115,52 +116,69 @@ class DSBot(Agent):
         if not self._pending_order:
             # Check if you are not waiting for pending action from the server
             if not self._wait_for_server:
-                self.pro_active()
+                self.proactive()
 
     # A proactive bot call function
-    def pro_active(self):
-        print("Here 2")
+    def proactive(self):
+        # print proactive logic
         # Store current incentive
         prv_price = 0
         #best_sell = MAX_SELL
         #best_buy = MIN_BUY
         for key, ord in Order.current().items():
-            if ord.is_private:
+            if ord.is_private and ord.is_pending:
                 self._role = ord.order_side
                 prv_price = ord.price
         
-        print("Here 3")
         # Take one price and one type
-        self.send_one_order(prv_price)
-
+        self.send_public_order(prv_price)
+        
 
 
     def reactive(self):
         pass
 
-    # Sends an order with specifications
-    def send_one_order(self, prv_price):
-        print("Here 4")
-        # Create a new order 
+    def send_private_order(self, price):
         new_order = Order.create_new()
-        new_order.market = Market(self._public_market_id)
-        new_order.price = prv_price
+
+        new_order.market = Market(self._private_market_id)
+        new_order.price = price
         new_order.units = 1
-        print("Here 5")
+
         new_order.order_type = OrderType.LIMIT
-        new_order.order_side = self._role
-        new_order.ref = "test order"
+        if self._role == OrderSide.BUY:
+            new_order.order_side = OrderSide.SELL
+        else:
+            new_order.order_side = OrderSide.BUY
+        new_order.ref = f"Private {self._role} for 1@{price}"
+        self.owner_or_target = "M000"
         self.send_order(new_order)
         # Check to not break
-        print("Here 6")
+        self._pending_order = True
+        self._wait_for_server = True
+
+    # Sends an order with specifications
+    def send_public_order(self, price):
+        # Create a new order 
+        new_order = Order.create_new()
+
+        new_order.market = Market(self._public_market_id)
+        new_order.price = price
+        new_order.units = 1
+
+        new_order.order_type = OrderType.LIMIT
+        new_order.order_side = self._role
+        new_order.ref = f"Public {self._role} for 1@{price}"
+        self.send_order(new_order)
+        # Check to not break
         self._pending_order = True
         self._wait_for_server = True
 
         # This is a continuous loop, use it as outermost when making decisions?
         # Check async lecture
-        print("\nThese are your current orders")
-        for key, val in Order.current().items():
-            print(val)
+        #print("\nThese are your current orders")
+        #for key, val in Order.current().items():
+        #    print(val)
         """
         Example output
         These are your current orders
@@ -170,9 +188,8 @@ class DSBot(Agent):
         Order(20392599,Others,BUY,1@305,widget,LIMIT,REF:'buy-order')
         Order(20392629,Others,SELL,3@850,widget,LIMIT)
         """
-        print("Here 7")
-        print("\nThis is your last traded?")    # Yes
-        print(Order.trades()[0])
+        #print("\nThis is your last traded?")    # Yes
+        #print(Order.trades()[0])
 
     def received_holdings(self, holdings):
 
