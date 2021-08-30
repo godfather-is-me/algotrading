@@ -22,8 +22,6 @@ MAX_SELL = 1000
 
 # Define goals - it is the equation they gave
 
-# Checks for whether there are holdlings available in the private and public market before making and buy or sell order
-# Try using the last executed price to make your strategy
 
 # The need for current orders is still vague. (One thing used is to check whether your order is in the system or not)
     # If possible, understand the minimum selling price, maximum buying price and if opportunity exists within both execute at that point, else just place order and wait for reaction
@@ -116,29 +114,46 @@ class DSBot(Agent):
         if not self._pending_order:
             # Check if you are not waiting for pending action from the server
             if not self._wait_for_server:
+                # Check available holdings/cash within either
                 if self._bot_type == BotType.PROACTIVE:
                     self.proactive()
                 else:
                     self.reactive()
 
+    # Check to see if order can be executed
+    def check_order(self, side, price, private=False):
+        if side == OrderSide.BUY:
+            if (self._cash_avail - price) < 0:
+                return False
+        else:
+            if private:
+                if self._prv_widgets_avail <= 0:
+                    return False
+            else:
+                if self._pub_widgets_avail <= 0:
+                    return False
+        return True
+
     # A proactive bot call function
     def proactive(self):
-        # print proactive logic
-        # change price
-        # check for availibility
-        # Store current incentive
         prv_price = 0
         prv_side = None
-        #best_sell = MAX_SELL
-        #best_buy = MIN_BUY
+        prv_exist = False
+        print("\n Current order book")
         for key, ord in Order.current().items():
             if ord.is_private and ord.is_pending:
+                print(f"This order is private and is for me {ord}")
                 prv_side = ord.order_side
                 prv_price = ord.price
+                prv_exist = True
         
         # Take one price and one type
-        self.send_public_order(prv_side, self.proactive_price(ord.order_side, prv_price))
-        self.send_private_order(prv_side, prv_price)
+        if prv_exist:
+            if self.check_order(prv_side, self.proactive_price(prv_side, prv_price), False):
+                self.send_public_order(prv_side, self.proactive_price(prv_side, prv_price))
+                #if not self._
+                self.send_private_order(prv_side, prv_price)
+                # Confirm that private was available, else cancel private order and refresh bools
         
     def proactive_price(self, order_side, prv_price):
         if order_side == OrderSide.BUY:
@@ -155,28 +170,9 @@ class DSBot(Agent):
     def reactive(self):
         pass
 
-    def send_private_order(self, side, price):
-        new_order = Order.create_new()
-
-        new_order.market = Market(self._private_market_id)
-        new_order.price = price
-        new_order.units = 1
-
-        new_order.order_type = OrderType.LIMIT
-        if side == OrderSide.BUY:
-            new_order.order_side = OrderSide.SELL
-        else:
-            new_order.order_side = OrderSide.BUY
-        new_order.ref = f"Private {side} for 1@{price}"
-        new_order.owner_or_target = "M000"
-        self.send_order(new_order)
-        # Check to not break
-        self._pending_order = True
-        self._wait_for_server = True
-
     # Sends an order with specifications
     def send_public_order(self, side, price):
-        # Create a new order 
+        # Create a new order object
         new_order = Order.create_new()
 
         new_order.market = Market(self._public_market_id)
@@ -191,6 +187,30 @@ class DSBot(Agent):
         self._pending_order = True
         self._wait_for_server = True
 
+    def send_private_order(self, side, price):
+        # Create new order bject
+        new_order = Order.create_new()
+
+        new_order.market = Market(self._private_market_id)
+        new_order.price = price
+        new_order.units = 1
+
+        new_order.order_type = OrderType.LIMIT
+        if side == OrderSide.BUY:
+            new_order.order_side = OrderSide.SELL
+        else:
+            new_order.order_side = OrderSide.BUY
+        
+        new_order.ref = f"Private {side} for 1@{price}"
+        # Send privately to manager
+        new_order.owner_or_target = "M000"
+        self.send_order(new_order)
+        # Check to not break
+        self._pending_order = True
+        self._wait_for_server = True
+
+
+    def example_order(self):
         # This is a continuous loop, use it as outermost when making decisions?
         # Check async lecture
         #print("\nThese are your current orders")
@@ -207,6 +227,7 @@ class DSBot(Agent):
         """
         #print("\nThis is your last traded?")    # Yes
         #print(Order.trades()[0])
+        pass
 
     def received_holdings(self, holdings):
 
