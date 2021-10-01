@@ -1,0 +1,112 @@
+
+=============================== Log Started [2021-10-01 16:38:28 India Standard Time] ===============================
+[2021-10-01 16:38:28,698:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:38:30,727:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:38:35,303:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:38:35,303:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:38:36,172:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 16:42:25,582:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:42:25,582:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 16:42:30 India Standard Time] ===============================
+[2021-10-01 16:42:30,835:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:42:32,472:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:42:34,758:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:42:34,758:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:42:35,625:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 16:44:07,589:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:44:07,589:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 16:45:02 India Standard Time] ===============================
+[2021-10-01 16:45:02,833:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:45:04,482:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:45:06,619:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:45:06,635:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:45:07,462:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 16:45:17,117:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:45:17,133:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 16:55:50 India Standard Time] ===============================
+[2021-10-01 16:55:50,199:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:55:51,823:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:55:54,171:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:55:54,171:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:55:55,020:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 16:55:55,020:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_holdings() method. Run with DEBUG for details.
+[2021-10-01 16:56:41,650:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:56:41,666:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 16:56:46 India Standard Time] ===============================
+[2021-10-01 16:56:46,451:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:56:48,277:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:56:50,617:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:56:50,617:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:56:51,482:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 16:56:51,482:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_holdings() method. Run with DEBUG for details.
+[2021-10-01 16:57:45,299:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:57:45,299:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 16:57:50 India Standard Time] ===============================
+[2021-10-01 16:57:50,095:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:57:51,774:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:57:53,999:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:57:54,006:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:58:28,743:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:58:28,743:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 16:58:41 India Standard Time] ===============================
+[2021-10-01 16:58:41,488:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 16:58:43,175:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 16:58:45,538:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 16:58:45,538:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 16:59:22,333:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 16:59:22,333:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 17:00:24 India Standard Time] ===============================
+[2021-10-01 17:00:24,219:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 17:00:25,921:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 17:00:28,258:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 17:00:28,274:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 17:00:29,147:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 17:00:29,160:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_holdings() method. Run with DEBUG for details.
+[2021-10-01 17:02:03,399:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 17:02:03,399:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 17:02:10 India Standard Time] ===============================
+[2021-10-01 17:02:10,755:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 17:02:12,455:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 17:02:14,808:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 17:02:14,816:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 17:02:15,665:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 17:02:15,673:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_holdings() method. Run with DEBUG for details.
+[2021-10-01 17:02:23,340:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 17:02:23,340:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 17:02:32 India Standard Time] ===============================
+[2021-10-01 17:02:32,842:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 17:02:34,521:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 17:02:36,812:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 17:02:36,812:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 17:02:37,697:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 17:02:37,711:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_holdings() method. Run with DEBUG for details.
+[2021-10-01 17:03:55,074:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 17:03:55,089:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 17:03:59 India Standard Time] ===============================
+[2021-10-01 17:03:59,775:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 17:04:01,416:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 17:04:03,800:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 17:04:03,808:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 17:04:04,680:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 17:10:43,626:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 17:10:43,642:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-01 17:10:48 India Standard Time] ===============================
+[2021-10-01 17:10:48,378:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-01 17:10:50,072:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-01 17:10:52,319:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-01 17:10:52,321:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-01 17:10:53,109:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 17:13:08,559:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-01 17:14:47,672:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-01 17:14:47,673:      agent.CAPM Bot]:     INFO - Shutting Down
