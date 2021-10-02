@@ -53,6 +53,12 @@ class CAPMBot(Agent):
         self._current_buy = {}
         self._current_sell = {}
 
+        # Bot properties
+        self._reactive = True
+        self._performace = 0
+        self._profit_margin = 0.25
+        self._avg_len_div = (1 / 4)               # To average values
+
     def initialised(self):
         # Extract payoff distribution for each security
         for _, market_info in self.markets.items():
@@ -60,21 +66,19 @@ class CAPMBot(Agent):
             description = market_info.description
             self._payoffs[security] = np.array([int(a) for a in description.split(",")]) / 100
 
-        avg_len_div = (1 / len(self._payoffs.keys()))
-
         # Load payoff squares
         for key, value in self._payoffs.items():
             self._payoffs_square[key] = np.square(value)
 
         # Load variances
         for key, value in self._payoffs.items():
-            self._payoffs_var[key] = (avg_len_div * np.sum(self._payoffs_square[key])) - ((avg_len_div * np.sum(value)) ** 2)
+            self._payoffs_var[key] = (self._avg_len_div * np.sum(self._payoffs_square[key])) - ((self._avg_len_div * np.sum(value)) ** 2)
 
         # Load covariances
         for i in combinations(self._payoffs.keys(), 2):
             payoff1 = self._payoffs[i[0]]
             payoff2 = self._payoffs[i[1]]
-            self._payoffs_covar[i] = (np.dot(payoff1, payoff2) * avg_len_div) - (np.average(payoff1) * np.average(payoff2))
+            self._payoffs_covar[i] = (np.dot(payoff1, payoff2) * self._avg_len_div) - (np.average(payoff1) * np.average(payoff2))
 
         print(self._payoffs)
         # print(self._payoffs_covar)
@@ -88,12 +92,71 @@ class CAPMBot(Agent):
         :param orders: list of orders
         :return:
         """
+        # Check for every potential stock here
+
         pass
 
-    # Function to check for every purchase in current market possible
-    def _expected_payoff(self):
-        # Expected payoff given by current market prices
-        pass
+    # Create stock and cash updates to check with formula
+    def _potential_update(self, stock_name, units):
+        # Buy = positive, sell = negative
+        stock_copy = self._current_stocks.copy()
+        cash_copy = self._cash_avail
+
+        # All implementations below are reactive anyway
+        #if self._reactive:
+        #    pass
+
+        # Buying units
+        if units > 0:
+            # If None, nothing to buy
+            if self._current_buy[stock_name] is None:
+                return 0
+            # If exists, and cash not available
+            if not self._cash_check(stock_name):
+                return 0
+            cash_copy -= self._current_buy[stock_name]
+            stock_copy[stock_name] += units
+        # Selling units
+        else:
+            if self._current_sell is None:
+                return 0
+            if not self._unit_check(stock_name):
+                return 0
+            stock_copy[stock_name] += units
+            cash_copy += self._current_sell[stock_name]
+
+        return self._expected_payoff - (self._risk_penalty * self._payoff_variance)
+        
+    # Function to calculate expected payoff and return values
+    def _expected_payoff(self, stocks, cash):
+        payoff_sum = 0
+        # Add the average state + number of stocks per state
+        for key, value in stocks.items():
+            payoff_sum += np.average(self._payoffs[key]) * value
+        return cash + payoff_sum
+
+    # Function to calculate payoff variance 
+    def _payoff_variance(self, stocks):
+        payoff_sum = 0
+        # Stock available square * its variance
+        for key, value in stocks.items():
+            payoff_sum += (value ** 2) * self._payoff_variance[key]
+        # 2 * covariance * avail stock 1 * avail stock 2
+        for key, value in self._payoffs_covar:
+            payoff_sum += 2 * value * stocks[key[0]] * stocks[key[1]]
+        return payoff_sum
+
+    # Safety check if there are available units to sell
+    def _unit_check(self, stock_name):
+        return self._current_stocks[stock_name] > 0
+
+    # Safety check if there is cash available to buy
+    def _cash_check(self, stock_name):
+        if self._reactive:
+            return (self._cash_avail - self._current_buy[stock_name]) > 0
+        # else
+        # return (self._cash_avail - )
+
 
     def is_portfolio_optimal(self):
         """
@@ -109,11 +172,12 @@ class CAPMBot(Agent):
         pass
 
     def received_orders(self, orders: List[Order]):
+        # Update all orders with current market value every time received orders is called
         print(Order.current().items())
 
     # Find current minimum and maximum values for each market whenever orders is refreshed
     def _current_market_values(self, items):
-        # refresh values to 0s
+        # refresh values to None
         self._refresh_values()
         for _, order in items:
             if order.order_side == OrderSide.BUY:
@@ -121,13 +185,11 @@ class CAPMBot(Agent):
             else:
                 self._current_sell = min((order.price / 100), self._current_sell[order.market.item])
 
-    # Refresh value with each holding
+    # Refresh values to None for reactive bot
     def _refresh_values(self):
         for key in self._current_buy.keys():
-            self._current_buy[key] = 0
-            self._current_sell[key] = 10.0
-        # Maximum for note is 5.0
-        self._current_sell['note'] = 5.0
+            self._current_buy[key] = None
+            self._current_sell[key] = None
 
 
     def received_session_info(self, session: Session):
@@ -137,7 +199,7 @@ class CAPMBot(Agent):
         pass
 
     def received_holdings(self, holdings):
-        self._cash_avail = holdings.cash_available
+        self._cash_avail = holdings.cash_available / 100
 
         # Set stocks
         for market, asset in holdings.assets.items():
