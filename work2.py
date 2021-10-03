@@ -18,3 +18,4 @@ print(np.dot([10, 0, 7.5, 2.5], [0,2.5,7.5,10]))
 a = np.array([10, 5, 32, 3]) / 5
 
 print(a)
+print(np.square(a))

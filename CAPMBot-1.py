@@ -14,8 +14,6 @@ from fmclient import Order, OrderSide, OrderType
 import numpy as np
 from itertools import combinations
 
-from numpy.lib.function_base import average
-
 # Submission details
 SUBMISSION = {"student_number": "1102225", "name": "Prathyush Prashanth Rao"}
 
@@ -84,6 +82,13 @@ class CAPMBot(Agent):
         # print(self._payoffs_covar)
         self.inform("Bot initialised, I have the payoffs for the states.")
 
+    def is_portfolio_optimal(self):
+        """
+        Returns true if the current holdings are optimal (as per the performance formula), false otherwise.
+        :return:
+        """
+        pass
+    
     def get_potential_performance(self, orders):
         """
         Returns the portfolio performance if the given list of orders is executed.
@@ -93,39 +98,74 @@ class CAPMBot(Agent):
         :return:
         """
         # Check for every potential stock here
+        stock_name = ''
+        units = 0
 
-        pass
+        # Initial performance
+        self._performace = self._potential_update(stock_name, units)
+        
+        # Check to buy all stocks
+        for key in self._current_stocks.keys():
+            curr_performance = self._potential_update(key, 1)
+            if curr_performance > self._performace:
+                stock_name = key
+                units = 1
+                self._performace = curr_performance
+        # Check to sell all stocks
+        for key in self._current_stocks.keys():
+            curr_performance = self._potential_update(key, -1)
+            if curr_performance > self._performace:
+                stock_name = key
+                units = -1
+                self._performace = curr_performance
+
+        return [stock_name, units]
+
+        
 
     # Create stock and cash updates to check with formula
     def _potential_update(self, stock_name, units):
-        # Buy = positive, sell = negative
+        # Units and cash after trade
         stock_copy = self._current_stocks.copy()
         cash_copy = self._cash_avail
 
-        # All implementations below are reactive anyway
-        #if self._reactive:
-        #    pass
-
+        # Get current performance
+        if units == 0:
+            return self._expected_payoff(stock_copy, cash_copy) - (self._risk_penalty * self._payoff_variance(stock_copy))
+        
+        # Strategy is reactive first, and proactive if there is no reaction possible
+        reactive = True
         # Buying units
         if units > 0:
             # If None, nothing to buy
             if self._current_buy[stock_name] is None:
-                return 0
+                reactive = False
+                #  If there is nothing in the market, curve tangent price
+                if self._current_sell[stock_name] is None:
+                    pass
+
             # If exists, and cash not available
-            if not self._cash_check(stock_name):
+            if not self._cash_check(stock_name, reactive):
                 return 0
-            cash_copy -= self._current_buy[stock_name]
+            if reactive:
+                cash_copy -= self._current_buy[stock_name]
+            else:
+                cash_copy -= self._current_sell[stock_name] - self._profit_margin
             stock_copy[stock_name] += units
         # Selling units
-        else:
+        elif units < 0:
             if self._current_sell is None:
-                return 0
+                reactive = False
+                if self._current_buy[stock_name] is None:
+                    # curve tangent price
+                    pass
             if not self._unit_check(stock_name):
                 return 0
+            if reactive:
+                cash_copy += self._current_sell[stock_name]
             stock_copy[stock_name] += units
-            cash_copy += self._current_sell[stock_name]
-
-        return self._expected_payoff - (self._risk_penalty * self._payoff_variance)
+        # else units == 0, get current performance
+        return self._expected_payoff(stock_copy, cash_copy) - (self._risk_penalty * self._payoff_variance(stock_copy))
         
     # Function to calculate expected payoff and return values
     def _expected_payoff(self, stocks, cash):
@@ -140,9 +180,9 @@ class CAPMBot(Agent):
         payoff_sum = 0
         # Stock available square * its variance
         for key, value in stocks.items():
-            payoff_sum += (value ** 2) * self._payoff_variance[key]
+            payoff_sum += (value ** 2) * self._payoffs_var[key]
         # 2 * covariance * avail stock 1 * avail stock 2
-        for key, value in self._payoffs_covar:
+        for key, value in self._payoffs_covar.items():
             payoff_sum += 2 * value * stocks[key[0]] * stocks[key[1]]
         return payoff_sum
 
@@ -151,19 +191,11 @@ class CAPMBot(Agent):
         return self._current_stocks[stock_name] > 0
 
     # Safety check if there is cash available to buy
-    def _cash_check(self, stock_name):
-        if self._reactive:
+    def _cash_check(self, stock_name, reactive):
+        if reactive:
             return (self._cash_avail - self._current_buy[stock_name]) > 0
         # else
-        # return (self._cash_avail - )
-
-
-    def is_portfolio_optimal(self):
-        """
-        Returns true if the current holdings are optimal (as per the performance formula), false otherwise.
-        :return:
-        """
-        pass
+        return (self._cash_avail - self._current_sell[stock_name] - self._profit_margin) > 0
 
     def order_accepted(self, order):
         pass

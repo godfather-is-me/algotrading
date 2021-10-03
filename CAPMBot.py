@@ -8,6 +8,7 @@ Student Number: 1102225
 Name: Prathyush Prashanth Rao
 Assignment: Task 2
 """
+from enum import Enum
 from typing import List
 from fmclient import Agent, Session
 from fmclient import Order, OrderSide, OrderType
@@ -22,6 +23,14 @@ FM_ACCOUNT = "pollent-broker"
 FM_EMAIL = "prathyushr@student.unimelb.edu.au"
 FM_PASSWORD = "1102225"
 MARKETPLACE_ID = 1309
+
+LOWER_LIMIT = 3.0
+UPPER_LIMIT = 7.0
+
+class Strategy(Enum):
+    REACTIVE = 0
+    PROACTIVE = 1
+    EMPTY_MARKET = 2
 
 
 class CAPMBot(Agent):
@@ -56,7 +65,7 @@ class CAPMBot(Agent):
         self._curr_orders = {}
 
         # Bot properties
-        self._perfomance = 0            # Bot's performance with current stocks
+        self._performance = 0            # Bot's performance with current stocks
         self._margin = 0.2       # Profit margin for proactive bot
         self._avg_value = (1/4)         # Value used when required to average properties
 
@@ -97,12 +106,36 @@ class CAPMBot(Agent):
         Returns true if the current holdings are optimal (as per the performance formula), false otherwise.
         :return:
         """
-        pass
+        print(self.get_potential_performance())
     
     # Function to get the performance of each possible trade
-    def get_potential_performance(self, orders):
-        
-        pass
+    def get_potential_performance(self):
+        # Check for every market
+        stock_name = ''
+        units = 0
+        to_order = {}   # Orders to be executed
+
+        # Initial performance
+        self._performance = self._performance_update(stock_name, units)[0]
+
+        # Check all stocks
+        for key in self._stocks_held.keys():
+            # Set up order dictionary
+            to_order[key] = None
+
+            # Check buy
+            buy_performance, buy_price = self._performance_update(key, 1)
+            sell_performance, sell_price = self._performance_update(key, -1)
+            if buy_performance > sell_performance:
+                if buy_performance > self._performance:
+                    to_order[key] = [key, 1, round(buy_price, 2)]
+            else:
+                if sell_performance > self._performance:
+                    to_order[key] = [key, -1, round(sell_price, 2)]
+                
+        return to_order
+                
+        # pass
         # Take each stock name and check for performance with buy/sell
         # If performance is better, add that to our list of stocks to execute
         # List includes - [stock name, buy/sell, price, isReactive]
@@ -119,52 +152,62 @@ class CAPMBot(Agent):
     def _performance_update(self, stock_name, units):
         # To modify variables
         stocks_held = self._stocks_held.copy()
+        inital_cash = self._cash_avail
         cash = self._cash_avail
-        reactive = True
+        strategy = Strategy.REACTIVE
+        return_val = []                     # Return [performance, price]
 
         # Get current performance metric
         if not units:
-            return self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held))
-
+            return [self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held)), 0]
+        
         # Buying units
         if units > 0:
             # If none, nothing to buy from sellers
             if self._curr_sell_prices[stock_name] is None:
-                reactive = False
+                strategy = Strategy.PROACTIVE
                 if self._curr_buy_prices[stock_name] is None:
                     # Nothing in the market, create optimal price               # -------- tangent price
-                    pass
+                    strategy = Strategy.EMPTY_MARKET
             # Check if cash is available
-            if not self._cash_check(stock_name, reactive):
-                return 0
+            if not self._cash_check(stock_name, strategy):
+                return [0, 0]
             stocks_held[stock_name] += units
-            if reactive:
+            if strategy == Strategy.REACTIVE:
                 cash -= self._curr_sell_prices[stock_name]
-            else:
+            elif strategy == Strategy.PROACTIVE:
                 cash -= (self._curr_buy_prices[stock_name] + self._margin)
+            else:
+                cash -= LOWER_LIMIT
         else:
             if self._curr_buy_prices[stock_name] is None:
-                reactive = False
+                strategy = Strategy.PROACTIVE
                 if self._curr_sell_prices[stock_name] is None:
                     # Nothing in the market, create optimal price using tangency
-                    pass
+                    strategy = Strategy.EMPTY_MARKET
             # Check if stock is available
             if not self._unit_check(stock_name):
-                return 0
+                return [0, 0]
             stocks_held[stock_name] += units
-            if reactive:
+            if strategy == Strategy.REACTIVE:
                 cash += self._curr_buy_prices[stock_name]
-            else:
+            elif strategy == Strategy.PROACTIVE:
                 cash += (self._curr_sell_prices - self._margin)
+            else:
+                cash += UPPER_LIMIT
 
-        return self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held))
- 
+        # Return values
+        return_val.append(self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held)))
+        return return_val + [abs(inital_cash - cash)]
+    
     # Safety function to check if cash available to buy
-    def _cash_check(self, stock_name, is_reactive):
-        if is_reactive:
+    def _cash_check(self, stock_name, strat):
+        if strat == Strategy.REACTIVE:
             return (self._cash_avail - self._curr_sell_prices[stock_name]) >= 0
+        elif strat == Strategy.PROACTIVE:
+            return (self._cash_avail - (self._curr_buy_prices[stock_name] + self._margin)) >= 0
         # else
-        return (self._cash_avail - (self._curr_buy_prices[stock_name] + self._margin)) >= 0
+        return (self._cash_avail - LOWER_LIMIT)
 
     # Safety function to check if stock available to sell
     def _unit_check(self, stock_name):
@@ -197,6 +240,8 @@ class CAPMBot(Agent):
         # Dummy placeholder to ensure functioning
         self._current_market_values(some_items)
 
+        self.is_portfolio_optimal()
+
 
     # Function to find current market buy/sell prices
     def _current_market_values(self, items):
@@ -205,12 +250,12 @@ class CAPMBot(Agent):
         for _, order in items:
             if order.order_side == OrderSide.BUY:
                 if self._curr_buy_prices[order.market.item] is None:
-                    self._curr_buy_prices[order.market.item] = order.price
+                    self._curr_buy_prices[order.market.item] = order.price / 100
                 else:
                     self._curr_buy_prices[order.market.item] = max((order.price / 100), self._curr_buy_prices[order.market.item])
             else:
                 if self._curr_sell_prices[order.market.item] is None:
-                    self._curr_sell_prices[order.market.item] = order.price
+                    self._curr_sell_prices[order.market.item] = order.price / 100
                 else:
                     self._curr_sell_prices[order.market.item] = min((order.price / 100), self._curr_sell_prices[order.market.item])
 
