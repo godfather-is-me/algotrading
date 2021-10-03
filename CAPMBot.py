@@ -8,13 +8,31 @@ Student Number: 1102225
 Name: Prathyush Prashanth Rao
 Assignment: Task 2
 """
+
+""" TO DO
+
+# -- Take each stock name and check for performance with buy/sell
+# -- If performance is better, add that to our list of stocks to execute
+# -- List includes - [stock name, buy/sell, price, isReactive]
+# Update list of all stocks currently being played with
+
+# Is optimal portfolio needs to check is all values are 0 (no stocks neeeded to be traded)
+# If false, go to send public order and create order management function to be called in received orders
+
+# Then implement pedning order check for each stock
+# Implement order accepted check, order rejected check
+# Cancel orders for pending order if not isReactive has waited too long
+
+"""
 from enum import Enum
 from typing import List
 from fmclient import Agent, Session
 from fmclient import Order, OrderSide, OrderType
 
+import copy
 import numpy as np
 from itertools import combinations
+
 
 # Submission details
 SUBMISSION = {"student_number": "1102225", "name": "Prathyush Prashanth Rao"}
@@ -62,18 +80,19 @@ class CAPMBot(Agent):
         self._stocks_held = {}          # Stocks available
         self._curr_buy_prices = {}      # Current buy prices in the market
         self._curr_sell_prices = {}     # Current sell prices in the market
-        self._curr_orders = {}
+        self._curr_orders = {}          # Current orders in the market (stock_name: order, type, time)
 
         # Bot properties
         self._performance = 0            # Bot's performance with current stocks
-        self._margin = 0.2       # Profit margin for proactive bot
+        self._margin = 0.2              # Profit margin for proactive bot
         self._avg_value = (1/4)         # Value used when required to average properties
 
     def initialised(self):
         # Extract payoff distribution for each security
-        for _, market_info in self.markets.items():
+        for market_id, market_info in self.markets.items():
             security = market_info.item
             description = market_info.description
+            self._market_ids[security] = market_id
             self._payoffs[security] = np.array([int(a) for a in description.split(",")]) / 100
 
         # Load payoff squares
@@ -96,60 +115,39 @@ class CAPMBot(Agent):
 
         # Load current orders in market (No orders when initialized)
         for key in self._payoffs.keys():
-            self._curr_orders[key] = 0
+            self._curr_orders[key] = None
 
         print(self._payoffs)
         self.inform("Bot initialised, I have the payoffs for the states.")
-
-    def is_portfolio_optimal(self):
-        """
-        Returns true if the current holdings are optimal (as per the performance formula), false otherwise.
-        :return:
-        """
-        print(self.get_potential_performance())
     
-    # Function to get the performance of each possible trade
-    def get_potential_performance(self):
+    # Function to get the performance of all stocks and return orders (empty or full)
+    def is_portfolio_optimal(self):
         # Check for every market
         stock_name = ''
         units = 0
         to_order = {}   # Orders to be executed
 
         # Initial performance
-        self._performance = self._performance_update(stock_name, units)[0]
+        self._performance = self.get_potential_performance(stock_name, units)[0]
 
         # Check all stocks
         for key in self._stocks_held.keys():
             # Set up order dictionary
             to_order[key] = None
 
-            # Check buy
-            buy_performance, buy_price = self._performance_update(key, 1)
-            sell_performance, sell_price = self._performance_update(key, -1)
+            buy_performance, buy_price, buy_strategy = self.get_potential_performance(key, 1)
+            sell_performance, sell_price, sell_strategy = self.get_potential_performance(key, -1)
             if buy_performance > sell_performance:
                 if buy_performance > self._performance:
-                    to_order[key] = [key, 1, round(buy_price, 2)]
+                    to_order[key] = [key, 1, round(buy_price, 3), buy_strategy]
             else:
                 if sell_performance > self._performance:
-                    to_order[key] = [key, -1, round(sell_price, 2)]
+                    to_order[key] = [key, -1, round(sell_price, 3), sell_strategy]
                 
         return to_order
                 
-        # pass
-        # Take each stock name and check for performance with buy/sell
-        # If performance is better, add that to our list of stocks to execute
-        # List includes - [stock name, buy/sell, price, isReactive]
-        # Update list of all stocks currently being played with
-
-        # Is optimal portfolio needs to check is all values are 0 (no stocks neeeded to be traded)
-        # If false, go to send public order and create order management function to be called in received orders
-
-        # Then implement pedning order check for each stock
-        # Implement order accepted check, order rejected check
-        # Cancel orders for pending order if not isReactive has waited too long
-
-    # Function to update stocks and cash according to strategy and return it's perforance metric
-    def _performance_update(self, stock_name, units):
+    # Function to get the potential performance of each stock and return metric
+    def get_potential_performance(self, stock_name, units):
         # To modify variables
         stocks_held = self._stocks_held.copy()
         inital_cash = self._cash_avail
@@ -198,7 +196,7 @@ class CAPMBot(Agent):
 
         # Return values
         return_val.append(self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held)))
-        return return_val + [abs(inital_cash - cash)]
+        return return_val + [abs(inital_cash - cash)] + [strategy]
     
     # Safety function to check if cash available to buy
     def _cash_check(self, stock_name, strat):
@@ -229,6 +227,59 @@ class CAPMBot(Agent):
             payoff_sum += 2 * value * stocks_held[key[0]] * stocks_held[key[1]]
         return payoff_sum
 
+    # Function to manage orders
+    # i.e. to cancel and create orders when required
+    # Receives orders from is_optimal 
+    # Excutes if not already in place, if in place do nothing
+    # Cancel orders that were supposed to be reactive
+    # Proacitve orders have a timer on them
+    # Is empty orders are cancelled when market is not empty anymore
+    def order_manager(self, market_orders):
+        # Get all orders, if none market is optimal with the stock
+        to_order = self.is_portfolio_optimal()
+
+        # ---- Function to cancel reactive orders not executed, proactive orders after 30 seconds, or non-empty markets
+
+        for key, value in to_order.items():
+            # Current performance for the stock is optimal, or order exists
+            if (value is None) or not (self._curr_orders[key] is None):
+                continue
+
+    # Function to create order
+    def _create_order(self, stock_name, side, price, strategy):
+        new_order = Order.create_new()
+        new_order.market = self._market_ids[stock_name]
+        new_order.order_side = side
+        new_order.price = price
+        new_order.order_type = OrderType.LIMIT
+        new_order.ref = str(strategy)
+        self.send_order(new_order)
+        # Return order so it can be cancelled if need be
+        return new_order
+
+    # Function to cancel order
+    def _cancel_order(self, order):
+        cancel_order = copy.copy(order)
+        cancel_order.order_type = OrderType.CANCEL
+        cancel_order.ref = "Cancelled due to strategy"
+        self.send_order(cancel_order)
+
+    # Function to cancel orders as per strategy
+    def _cancel_order_strategy(self, market_orders):
+        # Uses self._curr_orders
+        # Clear if order does not exist
+        # Cancel reactive straight up if still available
+        # Cancel proactive after 1 minute of no activity
+        # Cancel empty market if other orders are seen
+
+        for key, value in self._curr_orders.items():
+            # Current order does not exist
+            if value is None:
+                continue
+
+            # Curr order value in the format [order, strategy, time]
+
+
     def order_accepted(self, order):
         pass
 
@@ -242,22 +293,22 @@ class CAPMBot(Agent):
 
         self.is_portfolio_optimal()
 
-
     # Function to find current market buy/sell prices
     def _current_market_values(self, items):
         # Refresh values to None if it does not exist
         self._refresh_values()
         for _, order in items:
-            if order.order_side == OrderSide.BUY:
-                if self._curr_buy_prices[order.market.item] is None:
-                    self._curr_buy_prices[order.market.item] = order.price / 100
+            if not order.mine:
+                if order.order_side == OrderSide.BUY:
+                    if self._curr_buy_prices[order.market.item] is None:
+                        self._curr_buy_prices[order.market.item] = order.price / 100
+                    else:
+                        self._curr_buy_prices[order.market.item] = max((order.price / 100), self._curr_buy_prices[order.market.item])
                 else:
-                    self._curr_buy_prices[order.market.item] = max((order.price / 100), self._curr_buy_prices[order.market.item])
-            else:
-                if self._curr_sell_prices[order.market.item] is None:
-                    self._curr_sell_prices[order.market.item] = order.price / 100
-                else:
-                    self._curr_sell_prices[order.market.item] = min((order.price / 100), self._curr_sell_prices[order.market.item])
+                    if self._curr_sell_prices[order.market.item] is None:
+                        self._curr_sell_prices[order.market.item] = order.price / 100
+                    else:
+                        self._curr_sell_prices[order.market.item] = min((order.price / 100), self._curr_sell_prices[order.market.item])
 
     # Function to refresh values to
     def _refresh_values(self):

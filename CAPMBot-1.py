@@ -154,7 +154,7 @@ class CAPMBot(Agent):
             stock_copy[stock_name] += units
         # Selling units
         elif units < 0:
-            if self._current_sell is None:
+            if self._current_sell[stock_name] is None:
                 reactive = False
                 if self._current_buy[stock_name] is None:
                     # curve tangent price
