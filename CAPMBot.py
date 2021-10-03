@@ -53,10 +53,11 @@ class CAPMBot(Agent):
         self._stocks_held = {}          # Stocks available
         self._curr_buy_prices = {}      # Current buy prices in the market
         self._curr_sell_prices = {}     # Current sell prices in the market
+        self._curr_orders = {}
 
         # Bot properties
         self._perfomance = 0            # Bot's performance with current stocks
-        self._profit_margin = 0.25      # Profit margin for proactive bot
+        self._margin = 0.2       # Profit margin for proactive bot
         self._avg_value = (1/4)         # Value used when required to average properties
 
     def initialised(self):
@@ -84,6 +85,10 @@ class CAPMBot(Agent):
             state2 = self._payoffs[comb[1]]
             self._payoffs_covar[comb] = (np.dot(state1, state2) * self._avg_value) - (self._payoffs_avg[comb[0]] * self._payoffs_avg[comb[1]])
 
+        # Load current orders in market (No orders when initialized)
+        for key in self._payoffs.keys():
+            self._curr_orders[key] = 0
+
         print(self._payoffs)
         self.inform("Bot initialised, I have the payoffs for the states.")
 
@@ -98,6 +103,17 @@ class CAPMBot(Agent):
     def get_potential_performance(self, orders):
         
         pass
+        # Take each stock name and check for performance with buy/sell
+        # If performance is better, add that to our list of stocks to execute
+        # List includes - [stock name, buy/sell, price, isReactive]
+        # Update list of all stocks currently being played with
+
+        # Is optimal portfolio needs to check is all values are 0 (no stocks neeeded to be traded)
+        # If false, go to send public order and create order management function to be called in received orders
+
+        # Then implement pedning order check for each stock
+        # Implement order accepted check, order rejected check
+        # Cancel orders for pending order if not isReactive has waited too long
 
     # Function to update stocks and cash according to strategy and return it's perforance metric
     def _performance_update(self, stock_name, units):
@@ -115,6 +131,44 @@ class CAPMBot(Agent):
             # If none, nothing to buy from sellers
             if self._curr_sell_prices[stock_name] is None:
                 reactive = False
+                if self._curr_buy_prices[stock_name] is None:
+                    # Nothing in the market, create optimal price               # -------- tangent price
+                    pass
+            # Check if cash is available
+            if not self._cash_check(stock_name, reactive):
+                return 0
+            stocks_held[stock_name] += units
+            if reactive:
+                cash -= self._curr_sell_prices[stock_name]
+            else:
+                cash -= (self._curr_buy_prices[stock_name] + self._margin)
+        else:
+            if self._curr_buy_prices[stock_name] is None:
+                reactive = False
+                if self._curr_sell_prices[stock_name] is None:
+                    # Nothing in the market, create optimal price using tangency
+                    pass
+            # Check if stock is available
+            if not self._unit_check(stock_name):
+                return 0
+            stocks_held[stock_name] += units
+            if reactive:
+                cash += self._curr_buy_prices[stock_name]
+            else:
+                cash += (self._curr_sell_prices - self._margin)
+
+        return self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held))
+ 
+    # Safety function to check if cash available to buy
+    def _cash_check(self, stock_name, is_reactive):
+        if is_reactive:
+            return (self._cash_avail - self._curr_sell_prices[stock_name]) >= 0
+        # else
+        return (self._cash_avail - (self._curr_buy_prices[stock_name] + self._margin)) >= 0
+
+    # Safety function to check if stock available to sell
+    def _unit_check(self, stock_name):
+        return self._stocks_held[stock_name] > 0
 
     # Function to calculate expected payoff from excel sheet
     def _expected_payoff(self, stocks_held, cash):
