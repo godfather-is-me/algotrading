@@ -30,6 +30,8 @@ from fmclient import Agent, Session
 from fmclient import Order, OrderSide, OrderType
 
 import copy
+import datetime
+from fmclient.data.orm.market import Market
 import numpy as np
 from itertools import combinations
 
@@ -81,7 +83,7 @@ class CAPMBot(Agent):
         self._curr_buy_prices = {}      # Current buy prices in the market
         self._curr_sell_prices = {}     # Current sell prices in the market
         self._curr_orders = {}          # Current orders in the market (stock_name: order, type, time)
-
+        self._pending_order = {}        # Check to see if order is waiting for server acceptance
         # Bot properties
         self._performance = 0            # Bot's performance with current stocks
         self._margin = 0.2              # Profit margin for proactive bot
@@ -117,6 +119,10 @@ class CAPMBot(Agent):
         for key in self._payoffs.keys():
             self._curr_orders[key] = None
 
+        # No pending orders to start off
+        for key in self._payoffs.keys():
+            self._pending_order[key] = False
+        
         print(self._payoffs)
         self.inform("Bot initialised, I have the payoffs for the states.")
     
@@ -139,10 +145,10 @@ class CAPMBot(Agent):
             sell_performance, sell_price, sell_strategy = self.get_potential_performance(key, -1)
             if buy_performance > sell_performance:
                 if buy_performance > self._performance:
-                    to_order[key] = [key, 1, round(buy_price, 3), buy_strategy]
+                    to_order[key] = [key, 1, round(buy_price, 2), buy_strategy]
             else:
                 if sell_performance > self._performance:
-                    to_order[key] = [key, -1, round(sell_price, 3), sell_strategy]
+                    to_order[key] = [key, -1, round(sell_price, 2), sell_strategy]
                 
         return to_order
                 
@@ -169,7 +175,7 @@ class CAPMBot(Agent):
                     strategy = Strategy.EMPTY_MARKET
             # Check if cash is available
             if not self._cash_check(stock_name, strategy):
-                return [0, 0]
+                return [0, 0, strategy]
             stocks_held[stock_name] += units
             if strategy == Strategy.REACTIVE:
                 cash -= self._curr_sell_prices[stock_name]
@@ -185,7 +191,7 @@ class CAPMBot(Agent):
                     strategy = Strategy.EMPTY_MARKET
             # Check if stock is available
             if not self._unit_check(stock_name):
-                return [0, 0]
+                return [0, 0, strategy]
             stocks_held[stock_name] += units
             if strategy == Strategy.REACTIVE:
                 cash += self._curr_buy_prices[stock_name]
@@ -234,28 +240,43 @@ class CAPMBot(Agent):
     # Cancel orders that were supposed to be reactive
     # Proacitve orders have a timer on them
     # Is empty orders are cancelled when market is not empty anymore
-    def order_manager(self, market_orders):
+    def _order_manager(self, market_orders):
         # Get all orders, if none market is optimal with the stock
         to_order = self.is_portfolio_optimal()
 
-        # ---- Function to cancel reactive orders not executed, proactive orders after 30 seconds, or non-empty markets
+        # Function to clear orders that have been executed
+        self._clear_executed_orders(market_orders)
+
+        # Funciton to cancel orders not in line with strategy
+        self._cancel_order_strategy(market_orders)
 
         for key, value in to_order.items():
             # Current performance for the stock is optimal, or order exists
-            if (value is None) or not (self._curr_orders[key] is None):
+            if (value is None) or (not (self._curr_orders[key] is None)) or self._pending_order[key]:
                 continue
+
+            self._create_order(key, OrderSide.BUY if value[1] > 0 else OrderSide.SELL, value[2], value[3])
+            self._pending_order[key] = True
+
 
     # Function to create order
     def _create_order(self, stock_name, side, price, strategy):
         new_order = Order.create_new()
-        new_order.market = self._market_ids[stock_name]
+        new_order.market = Market(self._market_ids[stock_name])
         new_order.order_side = side
-        new_order.price = price
+        new_order.price = int(price * 100)
         new_order.order_type = OrderType.LIMIT
-        new_order.ref = str(strategy)
+        new_order.units = 1
+        if strategy == Strategy.REACTIVE:
+            new_order.ref ='R,'
+        elif strategy == Strategy.PROACTIVE:
+            new_order.ref = 'P,'
+        else:
+            new_order.ref = 'E,'
+        new_order.ref += stock_name
         self.send_order(new_order)
         # Return order so it can be cancelled if need be
-        return new_order
+        # return new_order
 
     # Function to cancel order
     def _cancel_order(self, order):
@@ -267,6 +288,7 @@ class CAPMBot(Agent):
     # Function to cancel orders as per strategy
     def _cancel_order_strategy(self, market_orders):
         # Uses self._curr_orders
+        # curr_orders = {'stock_name': [order, strategy]}
         # Clear if order does not exist
         # Cancel reactive straight up if still available
         # Cancel proactive after 1 minute of no activity
@@ -277,26 +299,82 @@ class CAPMBot(Agent):
             if value is None:
                 continue
 
-            # Curr order value in the format [order, strategy, time]
+            # Strategy wise
+            if value[1] == Strategy.REACTIVE:
+                self._cancel_order(value[0])
+                self._curr_orders[key] = None
+            elif value[1] == Strategy.PROACTIVE:
+                if (datetime.datetime.now() - value[0].date_created).total_seconds() > 60:
+                    self._cancel_order(value[0])
+                    self._curr_orders[key] = None
+            else:
+                # Check if more than one order exists for a given market
+                flag = False
+                for _, order in market_orders:
+                    if order.market.item == key:
+                        if not order.mine:
+                            flag = True
+                            break
+                if flag:
+                    self._cancel_order(value[0])
+                    self._curr_orders[key] = None
 
+            # Curr order value in the format [order, strategy]
 
+    # Function to clear order from current order if it has been accepted
+    def _clear_executed_orders(self, market_orders):
+        for key, value in self._curr_orders.items():
+            if value is None:
+                continue
+
+            flag = False
+            for _, order in market_orders:
+                if value[0] == order:
+                    # Order in the market
+                    flag = True
+                    break
+            if not flag:
+                self._curr_orders[key] = None
+
+    # If order accepted, add it to the list of current orders
     def order_accepted(self, order):
-        pass
+        bot.inform(f"Order ACCEPTED with details - {order.ref}")
+        strategy, stock_name = order.ref.split(",")
+        self._pending_order[stock_name] = False
+        if strategy == 'R':
+            strategy = Strategy.REACTIVE
+        elif strategy == 'P':
+            strategy = Strategy.PROACTIVE
+        else:
+            strategy = Strategy.EMPTY_MARKET
+        self._curr_orders[stock_name] = [order, strategy]
 
+    # If order rejected, check for information and update accordingly
     def order_rejected(self, info, order):
-        pass
+        bot.inform(f"Order REJECTED with reference {order.ref} and info - {info}")
+        strategy, stock_name = order.ref.split(",")
+        self._pending_order[stock_name] = False
 
     def received_orders(self, orders: List[Order]):
-        some_items = Order.current().items()
-        # Dummy placeholder to ensure functioning
-        self._current_market_values(some_items)
+        # Use current market for various processes
+        market_orders = Order.current().items()
 
-        self.is_portfolio_optimal()
+        # Work on current market values
+        self._current_market_values(market_orders)
+
+        # Manage orders - Cancel, clear, create, optimize
+        self._order_manager(market_orders)
+
+        # To optimize - 'check if my order is executed'
+        #print("At orders: ")
+        #print(orders)
+        #print()
 
     # Function to find current market buy/sell prices
     def _current_market_values(self, items):
         # Refresh values to None if it does not exist
         self._refresh_values()
+
         for _, order in items:
             if not order.mine:
                 if order.order_side == OrderSide.BUY:
