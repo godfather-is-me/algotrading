@@ -782,3 +782,24 @@
 [2021-10-04 12:11:45,533:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
 [2021-10-04 12:12:01,774:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
 [2021-10-04 12:12:01,774:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 12:13:31 India Standard Time] ===============================
+[2021-10-04 12:13:31,928:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 12:13:33,558:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-04 12:13:35,755:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 12:13:35,770:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 12:13:36,554:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-04 12:13:37,781:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 12:13:47,996:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 12:13:47,996:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 12:34:57 India Standard Time] ===============================
+[2021-10-04 12:34:57,928:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 12:34:59,527:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1309`
+[2021-10-04 12:35:01,684:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 12:35:01,698:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 12:35:02,494:      agent.CAPM Bot]:     INFO - Session: SID:34556:SessionState.OPEN
+[2021-10-04 12:35:03,513:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 12:35:09,384:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 12:35:11,974:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 12:35:11,974:      agent.CAPM Bot]:     INFO - Shutting Down

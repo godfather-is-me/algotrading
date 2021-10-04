@@ -1,0 +1,796 @@
+
+=============================== Log Started [2021-10-04 12:35:45 India Standard Time] ===============================
+[2021-10-04 12:35:45,149:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 12:35:46,821:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 12:35:49,037:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 12:35:49,055:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 12:35:49,920:      agent.CAPM Bot]:     INFO - Session: SID:34734:SessionState.OPEN
+[2021-10-04 12:35:52,886:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'SESSION_CLOSED', 'message': 'Closed session.'}, 'code': 400}
+[2021-10-04 12:35:52,977:      agent.CAPM Bot]:     INFO - Session: SID:34734:SessionState.PAUSED
+[2021-10-04 12:35:53,398:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'SESSION_CLOSED', 'message': 'Closed session.'}, 'code': 400}
+[2021-10-04 12:35:55,929:      agent.CAPM Bot]:     INFO - Session: SID:34734:SessionState.CLOSED
+[2021-10-04 12:36:11,172:      agent.CAPM Bot]:     INFO - Session: SID:34735:SessionState.OPEN
+[2021-10-04 12:36:16,093:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 12:36:16,337:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC
+[2021-10-04 12:36:16,598:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA
+[2021-10-04 12:36:16,622:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:16,627:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:16,834:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:16,855:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,note
+[2021-10-04 12:36:16,943:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:17,055:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:17,291:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:17,833:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:17,949:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,049:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,049:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,061:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,063:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,168:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,170:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,172:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,174:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,177:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,283:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,283:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,654:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:36:18,654:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:36:18,931:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:36:18,931:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:36:19,196:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:36:19,196:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:36:19,465:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:36:19,466:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:36:20,495:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 12:36:21,032:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:36:21,034:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:36:21,803:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 12:36:22,280:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:36:22,295:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:36:22,411:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 12:36:22,412:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 12:38:47 India Standard Time] ===============================
+[2021-10-04 12:38:47,947:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 12:38:49,604:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 12:38:51,888:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 12:38:51,905:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 12:38:52,751:      agent.CAPM Bot]:     INFO - Session: SID:34735:SessionState.OPEN
+[2021-10-04 12:38:54,027:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 12:38:54,287:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 12:38:54,592:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 12:38:54,872:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 12:38:55,142:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 12:38:55,690:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 12:38:56,223:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - Cancelled due to strategy
+[2021-10-04 12:38:56,235:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:38:56,908:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 12:38:56,908:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 12:38:57,023:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+
+=============================== Log Started [2021-10-04 12:51:43 India Standard Time] ===============================
+[2021-10-04 12:51:43,255:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 12:51:45,046:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 12:51:47,359:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 12:51:47,377:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 12:51:48,259:      agent.CAPM Bot]:     INFO - Session: SID:34735:SessionState.OPEN
+[2021-10-04 12:51:50,122:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 12:51:50,409:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 12:51:50,516:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:51:50,689:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 12:51:50,740:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:51:50,744:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:51:50,750:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:51:50,976:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 12:51:50,988:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 12:51:51,029:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 12:51:51,030:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 12:51:51,258:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+
+=============================== Log Started [2021-10-04 12:57:42 India Standard Time] ===============================
+[2021-10-04 12:57:42,198:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 12:57:43,830:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 12:57:46,053:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 12:57:46,063:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 12:57:46,912:      agent.CAPM Bot]:     INFO - Session: SID:34736:SessionState.OPEN
+[2021-10-04 12:58:10,782:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 12:58:11,290:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 12:58:11,290:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.order_accepted() method. Run with DEBUG for details.
+[2021-10-04 12:58:12,705:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 12:58:12,707:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 13:00:35 India Standard Time] ===============================
+[2021-10-04 13:00:35,688:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:00:37,328:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:00:39,549:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:00:39,569:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:00:40,345:      agent.CAPM Bot]:     INFO - Session: SID:34736:SessionState.OPEN
+[2021-10-04 13:00:41,546:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:00:41,650:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:00:41,767:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:00:41,845:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:00:41,880:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:00:41,999:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:00:42,448:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:00:42,623:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:00:42,624:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 13:04:34 India Standard Time] ===============================
+[2021-10-04 13:04:34,748:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:04:36,447:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:04:38,659:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:04:38,669:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:04:39,439:      agent.CAPM Bot]:     INFO - Session: SID:34736:SessionState.OPEN
+[2021-10-04 13:04:39,925:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 13:04:40,188:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC
+[2021-10-04 13:04:40,459:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 13:04:40,769:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INVALID', 'message': 'Invalid order.'}, 'code': 400}
+[2021-10-04 13:04:41,620:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,640:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,657:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,674:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,690:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,706:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,721:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,738:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,754:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,770:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,787:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,802:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,818:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,834:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,849:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,864:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,943:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,958:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,979:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:41,996:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:42,109:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:42,125:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:42,140:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:42,155:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:04:42,171:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:04:42,172:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 13:04:42,276:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC,Cancelled due to strategy
+[2021-10-04 13:04:42,543:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB,Cancelled due to strategy
+
+=============================== Log Started [2021-10-04 13:10:24 India Standard Time] ===============================
+[2021-10-04 13:10:24,186:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:10:26,287:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:10:28,533:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:10:28,547:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:10:29,411:      agent.CAPM Bot]:     INFO - Session: SID:34736:SessionState.OPEN
+[2021-10-04 13:10:31,991:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:10:32,422:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:10:32,578:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 13:10:33,110:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:10:33,659:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:10:34,195:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 13:10:34,735:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:10:35,260:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:10:35,818:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:10:35,818:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 13:10:36,088:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+
+=============================== Log Started [2021-10-04 13:11:28 India Standard Time] ===============================
+[2021-10-04 13:11:28,470:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:11:30,304:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:11:32,721:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:11:32,731:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:11:33,615:      agent.CAPM Bot]:     INFO - Session: SID:34736:SessionState.OPEN
+[2021-10-04 13:11:34,010:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC
+[2021-10-04 13:11:34,298:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA
+[2021-10-04 13:11:34,559:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INVALID', 'message': 'Invalid order.'}, 'code': 400}
+[2021-10-04 13:11:35,840:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC,Cancelled due to strategy
+[2021-10-04 13:11:36,130:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA,Cancelled due to strategy
+[2021-10-04 13:11:36,402:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:11:36,662:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 13:11:36,977:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 13:11:37,272:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 13:11:37,565:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 13:11:37,662:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:11:37,683:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:11:37,883:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:11:37,913:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:11:38,003:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:11:38,005:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 13:15:44 India Standard Time] ===============================
+[2021-10-04 13:15:44,949:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:15:46,622:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:15:48,925:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:15:48,941:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:15:49,797:      agent.CAPM Bot]:     INFO - Session: SID:34736:SessionState.OPEN
+[2021-10-04 13:15:58,823:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:01,111:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:01,623:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:02,183:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 13:16:05,107:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:21,908:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:22,191:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:16:22,472:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 13:16:22,753:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:16:23,284:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 13:16:30,214:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,232:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,245:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,260:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,382:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,399:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,434:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,483:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:30,857:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 13:16:31,001:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:16:31,142:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:31,420:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 13:16:31,688:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:16:31,969:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 13:16:32,268:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 13:16:32,841:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:16:32,842:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 13:19:55 India Standard Time] ===============================
+[2021-10-04 13:19:55,513:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:19:57,145:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:19:59,673:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:19:59,682:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:20:00,550:      agent.CAPM Bot]:     INFO - Session: SID:34737:SessionState.OPEN
+[2021-10-04 13:20:01,769:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:20:07,461:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 13:20:13,305:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 13:20:13,858:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 13:20:14,433:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 13:20:17,809:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:20:18,355:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 13:20:41,891:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:20:42,441:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 13:20:51,002:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:20:51,543:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 13:20:52,779:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:20:52,779:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 13:23:13 India Standard Time] ===============================
+[2021-10-04 13:23:13,418:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:23:15,108:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:23:17,371:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:23:17,380:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:23:18,246:      agent.CAPM Bot]:     INFO - Session: SID:34737:SessionState.OPEN
+[2021-10-04 13:23:21,239:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:23:21,813:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 13:23:22,320:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 13:23:23,372:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 13:23:24,190:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:23:24,190:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 13:26:05 India Standard Time] ===============================
+[2021-10-04 13:26:05,680:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 13:26:07,307:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 13:26:09,470:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 13:26:09,488:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 13:26:10,234:      agent.CAPM Bot]:     INFO - Session: SID:34737:SessionState.OPEN
+[2021-10-04 13:26:11,853:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,864:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,873:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,884:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,892:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,903:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,911:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,921:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:11,928:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:12,261:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 13:26:12,403:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 13:26:12,772:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 13:26:12,774:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:20:07 India Standard Time] ===============================
+[2021-10-04 14:20:07,923:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:20:09,838:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:20:12,084:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:20:12,096:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:20:12,987:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:20:14,829:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:20:15,521:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:20:19,239:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:20:20,112:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:20:20,298:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:20:20,346:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:20:20,530:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:20:20,562:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:20:20,699:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:20:20,739:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:20:20,795:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:20:20,795:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:23:14 India Standard Time] ===============================
+[2021-10-04 14:23:14,893:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:23:16,547:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:23:18,938:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:23:18,948:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:23:19,823:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:23:20,796:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:23:21,306:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:23:21,579:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:23:21,857:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:23:23,748:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,772:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,788:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,804:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,820:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,949:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,965:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:23,981:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:24,005:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:23:24,413:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:23:24,413:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 14:23:24,643:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+
+=============================== Log Started [2021-10-04 14:26:16 India Standard Time] ===============================
+[2021-10-04 14:26:16,949:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:26:18,704:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:26:21,002:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:26:21,016:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:26:21,902:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:26:23,055:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:23,390:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:23,717:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:24,541:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:25,545:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:25,851:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:26:26,131:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:26:26,439:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:26,712:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:26,987:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:27,510:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:28,008:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:28,345:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:28,637:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:29,221:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:26:29,750:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:35,829:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:36,121:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:26:45,575:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:54,673:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:55,574:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:56,136:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:26:56,486:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:57,022:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:26:57,534:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:27:05,279:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:27:14,126:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:27:15,425:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:27:15,947:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:27:16,490:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:27:17,009:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:27:17,149:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:27:17,871:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:27:17,871:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:28:20 India Standard Time] ===============================
+[2021-10-04 14:28:20,631:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:28:22,323:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:28:24,589:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:28:24,589:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:28:25,444:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:28:26,728:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:26,993:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:27,530:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:27,796:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:28,360:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:28,610:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:29,171:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:29,447:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:29,699:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:29,973:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:30,361:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:30,773:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:28:31,053:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:31,354:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:31,882:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:32,139:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:32,687:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:35,647:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:36,717:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:41,685:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:42,225:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:42,539:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:43,049:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:43,356:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:45,493:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:46,191:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:46,499:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:46,754:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:47,098:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:28:47,398:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:47,935:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:28:48,489:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:50,582:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:28:50,852:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:28:54,615:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:28:54,744:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:54,856:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:54,904:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:54,952:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,000:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,048:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,088:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,136:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,184:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,224:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,336:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,352:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,400:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,448:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,496:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,544:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,584:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,632:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,680:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,720:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:55,768:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:56,000:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:56,040:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:56,096:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:56,354:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:56,711:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:28:56,891:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:28:56,891:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:34:15 India Standard Time] ===============================
+[2021-10-04 14:34:15,645:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:34:17,285:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:34:19,560:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:34:19,568:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:34:20,325:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:34:25,789:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:34:26,346:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:34:26,911:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:34:35,523:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:34:36,031:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:34:45,667:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:34:45,814:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:34:46,373:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:34:46,373:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:36:06 India Standard Time] ===============================
+[2021-10-04 14:36:06,758:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:36:08,419:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:36:10,709:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:36:10,715:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:36:11,690:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:36:15,867:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:36:16,392:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:36:16,659:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:36:17,238:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:36:17,512:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:36:18,081:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:36:18,345:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:36:18,493:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:36:18,533:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:36:18,686:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:36:18,953:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:36:19,200:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:36:19,857:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:36:19,857:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:36:55 India Standard Time] ===============================
+[2021-10-04 14:36:55,415:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:36:57,060:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:36:59,312:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:36:59,326:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:37:00,063:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.OPEN
+[2021-10-04 14:37:27,131:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:37:27,477:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:37:27,745:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:37:28,086:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:37:28,346:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:37:59,585:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.PAUSED
+[2021-10-04 14:38:02,611:      agent.CAPM Bot]:     INFO - Session: SID:34740:SessionState.CLOSED
+[2021-10-04 14:38:13,942:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:38:13,942:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:38:39 India Standard Time] ===============================
+[2021-10-04 14:38:39,205:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:38:40,904:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:38:43,250:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:38:43,261:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:38:44,370:      agent.CAPM Bot]:     INFO - Session: SID:34742:SessionState.OPEN
+[2021-10-04 14:38:45,084:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:38:45,516:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:38:45,804:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:38:46,110:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:38:46,392:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:38:46,684:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:38:47,050:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:38:47,347:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:38:47,630:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:38:47,910:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:38:48,471:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:38:54,609:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:38:55,511:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:38:56,098:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:39:04,710:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 14:39:05,366:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:39:06,229:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:15,984:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:39:16,293:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 14:39:16,634:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:39:16,967:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:39:20,569:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:21,108:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:21,674:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:39:23,790:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:25,323:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:39:26,091:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:26,639:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:39:26,931:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:39:27,336:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 14:39:27,930:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:28,463:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:29,076:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:39:31,903:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:34,391:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:39:37,679:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 14:39:45,154:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 14:39:45,702:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:45,991:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:46,280:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:39:46,598:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:39:46,883:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:47,163:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:47,466:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:39:47,776:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:48,319:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:39:48,831:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:39:55,437:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:39:56,113:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:39:56,489:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:39:56,781:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 14:40:05,144:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 14:40:05,776:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:40:05,865:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 14:40:06,045:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:40:06,663:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:40:09,794:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:40:09,794:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:42:00 India Standard Time] ===============================
+[2021-10-04 14:42:00,941:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:42:02,573:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:42:05,389:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:42:05,397:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:42:06,262:      agent.CAPM Bot]:     INFO - Session: SID:34742:SessionState.OPEN
+[2021-10-04 14:42:07,186:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:42:07,506:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:08,044:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:42:08,340:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:42:08,935:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:42:09,239:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:09,564:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:42:09,903:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:42:10,153:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:42:10,153:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 14:42:10,185:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+
+=============================== Log Started [2021-10-04 14:42:28 India Standard Time] ===============================
+[2021-10-04 14:42:28,203:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:42:29,935:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:42:33,408:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:42:33,418:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:42:34,318:      agent.CAPM Bot]:     INFO - Session: SID:34742:SessionState.OPEN
+[2021-10-04 14:42:36,448:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:42:36,807:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:37,088:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:42:37,649:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:42:38,198:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:40,545:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:45,681:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:46,265:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:46,788:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:42:56,061:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:42:56,403:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:42:56,704:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:43:05,901:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:43:06,214:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:43:06,494:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:43:06,885:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:43:07,200:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:43:15,691:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:43:16,342:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:43:16,914:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 14:43:25,857:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:43:26,167:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:43:26,544:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:43:35,395:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:43:36,035:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:43:36,413:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:43:36,966:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:43:45,899:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 14:43:46,344:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:43:46,668:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:43:46,963:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 14:43:47,239:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:43:56,483:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 14:43:57,556:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 14:43:58,115:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 14:43:58,398:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:43:58,950:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:43:59,498:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:44:00,022:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:44:02,850:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:44:02,858:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:47:26 India Standard Time] ===============================
+[2021-10-04 14:47:26,229:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:47:27,932:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:47:30,138:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:47:30,143:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:47:30,993:      agent.CAPM Bot]:     INFO - Session: SID:34742:SessionState.OPEN
+[2021-10-04 14:47:32,404:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:47:34,907:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 14:47:35,309:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:47:35,666:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:47:36,183:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:47:45,220:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 14:47:45,729:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 14:47:48,069:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:48:12,967:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:48:12,967:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:49:18 India Standard Time] ===============================
+[2021-10-04 14:49:18,012:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:49:19,743:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:49:22,025:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:49:22,041:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:49:22,913:      agent.CAPM Bot]:     INFO - Session: SID:34742:SessionState.OPEN
+[2021-10-04 14:49:26,275:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:49:26,645:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:49:26,916:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:49:27,198:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:49:27,465:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:49:27,760:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 14:49:29,368:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:49:33,375:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:49:33,391:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 14:49:57 India Standard Time] ===============================
+[2021-10-04 14:49:57,396:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 14:49:59,113:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 14:50:01,426:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 14:50:01,441:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 14:50:02,320:      agent.CAPM Bot]:     INFO - Session: SID:34742:SessionState.OPEN
+[2021-10-04 14:50:25,983:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:26,588:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:50:26,872:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:28,757:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:30,058:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:31,371:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:33,022:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:34,056:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 14:50:34,352:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:50:34,651:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 14:50:35,444:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:50:35,977:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:50:36,534:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 14:50:44,223:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:50:44,738:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 14:50:45,807:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:50:46,596:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:50:55,571:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:50:55,842:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:50:56,617:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 14:51:09,721:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 14:51:15,441:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:51:15,944:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:51:16,476:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 14:51:45,986:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:51:55,032:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:51:55,316:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 14:51:55,577:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 14:51:55,855:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:51:56,397:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 14:52:05,430:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:52:05,954:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:52:06,514:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 14:52:15,058:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:52:15,635:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:52:15,904:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:52:16,191:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:52:16,468:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:52:16,750:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:52:17,294:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:52:17,590:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 14:52:18,140:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 14:52:45,981:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 14:52:46,498:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 14:52:46,766:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 14:52:52,728:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 14:52:52,728:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 15:00:31 India Standard Time] ===============================
+[2021-10-04 15:00:31,966:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 15:00:32,803:      agent.CAPM Bot]:    ERROR - User interrupt received during initialisation.
+[2021-10-04 15:00:32,803:      agent.CAPM Bot]:  WARNING - Initialisation failed. Exiting!
+
+=============================== Log Started [2021-10-04 15:00:40 India Standard Time] ===============================
+[2021-10-04 15:00:40,103:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 15:00:42,090:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 15:00:44,410:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 15:00:44,427:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 15:00:45,299:      agent.CAPM Bot]:     INFO - Session: SID:34743:SessionState.OPEN
+[2021-10-04 15:00:46,256:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:00:50,699:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:00:51,220:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:00:51,502:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:00:51,777:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:00:52,048:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:00:52,332:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:00:52,759:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:00:53,061:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:00:53,621:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:00:54,156:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:00:55,911:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:00:59,820:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:00,375:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:00,930:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:01:02,237:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:02,778:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:06,113:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:01:06,646:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:01:26,505:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:27,013:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:27,548:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:01:28,314:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:01:39,075:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:01:39,520:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:40,636:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:41,153:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:41,785:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:01:42,067:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:42,850:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:45,770:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:01:46,274:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:01:46,786:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:01:50,113:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:56,012:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:57,026:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:57,590:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:01:57,852:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:58,376:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:58,991:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:01:59,508:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:00,023:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:05,865:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:06,393:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:07,056:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:15,473:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:02:15,751:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:02:16,022:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:16,294:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:02:16,567:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:16,840:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:17,092:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:02:17,356:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:25,559:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:02:26,113:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:02:26,645:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:02:28,160:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:02:35,633:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:02:36,132:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:02:37,155:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:37,692:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:38,209:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:45,607:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:46,146:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:46,669:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:46,936:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:47,728:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:48,261:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:53,104:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:53,643:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:02:54,170:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:02:54,444:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:03:06,781:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:03:17,362:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:03:18,896:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:03:29,613:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 15:03:29,613:      agent.CAPM Bot]:     INFO - Shutting Down

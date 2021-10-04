@@ -28,11 +28,12 @@ from enum import Enum
 from typing import List
 from fmclient import Agent, Session
 from fmclient import Order, OrderSide, OrderType
+from fmclient.data.orm.market import Market
 
 import copy
-import datetime
-from fmclient.data.orm.market import Market
+import pytz
 import numpy as np
+from datetime import datetime, timedelta, tzinfo
 from itertools import combinations
 
 
@@ -42,16 +43,17 @@ SUBMISSION = {"student_number": "1102225", "name": "Prathyush Prashanth Rao"}
 FM_ACCOUNT = "pollent-broker"
 FM_EMAIL = "prathyushr@student.unimelb.edu.au"
 FM_PASSWORD = "1102225"
-MARKETPLACE_ID = 1309
+MARKETPLACE_ID = 1347
 
 LOWER_LIMIT = 3.0
 UPPER_LIMIT = 7.0
+
+ORDER_CANCEL_MSG = "Cancelled due to strategy"
 
 class Strategy(Enum):
     REACTIVE = 0
     PROACTIVE = 1
     EMPTY_MARKET = 2
-
 
 class CAPMBot(Agent):
 
@@ -159,12 +161,12 @@ class CAPMBot(Agent):
         inital_cash = self._cash_avail
         cash = self._cash_avail
         strategy = Strategy.REACTIVE
-        return_val = []                     # Return [performance, price]
+        return_val = []                     # Return [performance, price, strategy]
 
         # Get current performance metric
         if not units:
-            return [self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held)), 0]
-        
+            return [self._expected_payoff(stocks_held, cash) - (self._risk_penalty * self._payoff_variance(stocks_held)), 0, strategy]
+
         # Buying units
         if units > 0:
             # If none, nothing to buy from sellers
@@ -196,7 +198,7 @@ class CAPMBot(Agent):
             if strategy == Strategy.REACTIVE:
                 cash += self._curr_buy_prices[stock_name]
             elif strategy == Strategy.PROACTIVE:
-                cash += (self._curr_sell_prices - self._margin)
+                cash += (self._curr_sell_prices[stock_name] - self._margin)
             else:
                 cash += UPPER_LIMIT
 
@@ -242,14 +244,20 @@ class CAPMBot(Agent):
     # Is empty orders are cancelled when market is not empty anymore
     def _order_manager(self, market_orders):
         # Get all orders, if none market is optimal with the stock
+
+        #print("Before is optimal portfolio")
         to_order = self.is_portfolio_optimal()
 
+        #print("Before clear executed orders function call")
         # Function to clear orders that have been executed
         self._clear_executed_orders(market_orders)
 
+        #print("Before cancel order strategy function call")
         # Funciton to cancel orders not in line with strategy
         self._cancel_order_strategy(market_orders)
 
+
+        #print("Before create order strategy call")
         for key, value in to_order.items():
             # Current performance for the stock is optimal, or order exists
             if (value is None) or (not (self._curr_orders[key] is None)) or self._pending_order[key]:
@@ -282,7 +290,7 @@ class CAPMBot(Agent):
     def _cancel_order(self, order):
         cancel_order = copy.copy(order)
         cancel_order.order_type = OrderType.CANCEL
-        cancel_order.ref = "Cancelled due to strategy"
+        cancel_order.ref = order.ref + "," + ORDER_CANCEL_MSG
         self.send_order(cancel_order)
 
     # Function to cancel orders as per strategy
@@ -298,13 +306,14 @@ class CAPMBot(Agent):
             # Current order does not exist
             if value is None:
                 continue
-
+            
             # Strategy wise
             if value[1] == Strategy.REACTIVE:
                 self._cancel_order(value[0])
                 self._curr_orders[key] = None
             elif value[1] == Strategy.PROACTIVE:
-                if (datetime.datetime.now() - value[0].date_created).total_seconds() > 60:
+                create_time = value[0].date_created - timedelta(hours=11)
+                if (datetime.utcnow() - create_time.replace(tzinfo=None)).total_seconds() > 10:
                     self._cancel_order(value[0])
                     self._curr_orders[key] = None
             else:
@@ -339,8 +348,15 @@ class CAPMBot(Agent):
     # If order accepted, add it to the list of current orders
     def order_accepted(self, order):
         bot.inform(f"Order ACCEPTED with details - {order.ref}")
+        # For successful cancel order
+        if order.order_type == OrderType.CANCEL:
+            self._curr_orders[order.ref.split(",")[1]] = None
+            return
+
+        # For succesful create order
         strategy, stock_name = order.ref.split(",")
         self._pending_order[stock_name] = False
+
         if strategy == 'R':
             strategy = Strategy.REACTIVE
         elif strategy == 'P':
@@ -356,12 +372,16 @@ class CAPMBot(Agent):
         self._pending_order[stock_name] = False
 
     def received_orders(self, orders: List[Order]):
+
+        #print("Before market orders")
         # Use current market for various processes
         market_orders = Order.current().items()
 
+        #print("Before current market values")
         # Work on current market values
         self._current_market_values(market_orders)
 
+        #print("Before order manager")
         # Manage orders - Cancel, clear, create, optimize
         self._order_manager(market_orders)
 
@@ -409,7 +429,7 @@ class CAPMBot(Agent):
             self._stocks_held[market.item] = asset.units_available
 
         # Print values
-        print(f"Cash settled - {holdings.cash} and cash available 0 {holdings.cash_available}")
+        print(f"Cash settled - {holdings.cash} and cash available {holdings.cash_available}")
         for market, asset in holdings.assets.items():
             print(f"Assets settled {asset.units} and available {asset.units_available} for market {market.item}")
 
