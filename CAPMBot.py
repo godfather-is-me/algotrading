@@ -30,8 +30,11 @@ FM_EMAIL = "prathyushr@student.unimelb.edu.au"
 FM_PASSWORD = "1102225"
 MARKETPLACE_ID = 1347
 
+MARGIN = 0.2
 LOWER_LIMIT = 3.0
 UPPER_LIMIT = 7.0
+CASH_DIVISOR = 100
+PROACTIVE_TIMER = 10
 
 ORDER_CANCEL_MSG = "Cancelled due to strategy"
 
@@ -74,7 +77,7 @@ class CAPMBot(Agent):
 
         # Bot properties
         self._performance = 0            # Bot's performance with current stocks
-        self._margin = 0.2              # Profit margin for proactive bot
+        self._margin = MARGIN              # Profit margin for proactive bot
         self._avg_value = (1/4)         # Value used when required to average properties
 
     # Function to initialize all class variables
@@ -84,7 +87,7 @@ class CAPMBot(Agent):
             security = market_info.item
             description = market_info.description
             self._market_ids[security] = market_id
-            self._payoffs[security] = np.array([int(a) for a in description.split(",")]) / 100
+            self._payoffs[security] = np.array([int(a) for a in description.split(",")]) / CASH_DIVISOR
 
         # Load payoff squares
         for key, value in self._payoffs.items():
@@ -261,7 +264,7 @@ class CAPMBot(Agent):
         new_order = Order.create_new()
         new_order.market = Market(self._market_ids[stock_name])
         new_order.order_side = side
-        new_order.price = int(price * 100)
+        new_order.price = int(price * CASH_DIVISOR)
         new_order.order_type = OrderType.LIMIT
         new_order.units = 1
 
@@ -297,7 +300,7 @@ class CAPMBot(Agent):
                 self._curr_orders[key] = None
             elif value[1] == Strategy.PROACTIVE:
                 create_time = value[0].date_created - timedelta(hours=11)
-                if (datetime.utcnow() - create_time.replace(tzinfo=None)).total_seconds() > 10:
+                if (datetime.utcnow() - create_time.replace(tzinfo=None)).total_seconds() > PROACTIVE_TIMER:
                     self._cancel_order(value[0])
                     self._curr_orders[key] = None
             else:
@@ -375,14 +378,14 @@ class CAPMBot(Agent):
             if not order.mine:
                 if order.order_side == OrderSide.BUY:
                     if self._curr_buy_prices[order.market.item] is None:
-                        self._curr_buy_prices[order.market.item] = order.price / 100
+                        self._curr_buy_prices[order.market.item] = order.price / CASH_DIVISOR
                     else:
-                        self._curr_buy_prices[order.market.item] = max((order.price / 100), self._curr_buy_prices[order.market.item])
+                        self._curr_buy_prices[order.market.item] = max((order.price / CASH_DIVISOR), self._curr_buy_prices[order.market.item])
                 else:
                     if self._curr_sell_prices[order.market.item] is None:
-                        self._curr_sell_prices[order.market.item] = order.price / 100
+                        self._curr_sell_prices[order.market.item] = order.price / CASH_DIVISOR
                     else:
-                        self._curr_sell_prices[order.market.item] = min((order.price / 100), self._curr_sell_prices[order.market.item])
+                        self._curr_sell_prices[order.market.item] = min((order.price / CASH_DIVISOR), self._curr_sell_prices[order.market.item])
 
     # Function to refresh values to
     def _refresh_values(self):
@@ -400,7 +403,7 @@ class CAPMBot(Agent):
     # Function to log stocks and cash currently owned
     def received_holdings(self, holdings):
         # Store cash and stocks
-        self._cash_avail = holdings.cash_available / 100
+        self._cash_avail = holdings.cash_available / CASH_DIVISOR
         for market, asset in holdings.assets.items():
             self._stocks_held[market.item] = asset.units_available
 
