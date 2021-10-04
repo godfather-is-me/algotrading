@@ -794,3 +794,943 @@
 [2021-10-04 15:03:18,896:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
 [2021-10-04 15:03:29,613:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
 [2021-10-04 15:03:29,613:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 15:11:24 India Standard Time] ===============================
+[2021-10-04 15:11:24,762:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 15:11:26,595:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 15:11:28,825:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 15:11:28,831:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 15:11:29,608:      agent.CAPM Bot]:     INFO - Session: SID:34743:SessionState.OPEN
+[2021-10-04 15:11:31,130:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:11:36,282:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:11:46,743:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:11:47,003:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:11:47,529:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:11:56,296:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:11:56,550:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:11:56,815:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:11:57,176:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:11:57,437:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:11:57,971:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:11:58,220:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:11:58,486:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:11:58,756:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:11:59,026:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:11:59,296:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:12:00,593:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:01,131:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:12:01,394:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:12:02,650:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:12:04,463:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:06,236:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:12:08,306:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:09,099:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:12:09,359:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:12:12,043:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:12,578:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:12:13,384:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:12:13,648:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:14,290:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:12:14,817:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:16,634:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:16,916:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:12:17,192:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:12:18,198:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:18,719:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:18,977:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:19,267:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:12:19,543:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:12:20,431:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:20,969:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:21,545:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:12:21,897:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:12:22,171:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:22,572:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:12:22,913:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:12:36,324:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:12:36,648:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:37,013:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:12:37,420:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:12:37,758:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:38,314:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:38,983:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:39,652:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:12:40,196:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:12:46,100:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:12:46,615:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:12:46,873:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:12:50,761:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:12:56,137:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:12:56,653:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:13:06,601:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:13:16,224:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:13:16,485:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:13:16,745:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:13:17,282:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:13:17,550:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:13:17,822:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:13:18,078:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:13:18,354:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:13:18,614:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:13:26,375:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:13:28,724:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:13:29,230:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:14:07,632:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:14:08,138:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:14:27,469:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:14:27,946:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:14:28,472:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:14:28,723:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:14:36,934:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:14:39,221:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:14:39,469:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:14:47,229:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:14:47,485:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:14:48,012:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:14:56,720:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:15:16,866:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:15:17,149:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:15:17,553:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:15:26,867:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:15:27,895:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:15:36,487:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:15:46,640:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:15:46,995:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:15:47,278:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:15:47,827:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:15:56,765:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:15:57,050:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:15:57,299:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:15:57,804:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:15:58,578:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:16:08,609:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:16:09,142:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:16:17,037:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:16:17,780:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:16:18,353:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:16:19,143:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:16:37,976:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:16:38,491:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:16:39,020:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:16:40,415:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 15:16:40,415:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 15:16:45 India Standard Time] ===============================
+[2021-10-04 15:16:45,253:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 15:16:46,938:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 15:16:49,317:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 15:16:49,332:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 15:16:50,205:      agent.CAPM Bot]:     INFO - Session: SID:34743:SessionState.OPEN
+[2021-10-04 15:16:56,470:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:16:57,159:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:16:57,689:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:17:06,217:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:17:06,958:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:17:07,926:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:17:08,213:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:17:08,731:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:17:16,830:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:17:27,579:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:17:27,857:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:17:28,398:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:17:37,664:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:17:38,507:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:17:39,310:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:17:39,941:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:17:46,776:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:17:56,647:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:17:57,626:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:17:57,899:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:17:58,185:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:17:58,472:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:17:58,765:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:18:06,907:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:18:07,594:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:18:37,975:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:18:38,488:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:18:41,402:      agent.CAPM Bot]:     INFO - Session: SID:34743:SessionState.PAUSED
+[2021-10-04 15:18:44,546:      agent.CAPM Bot]:     INFO - Session: SID:34743:SessionState.CLOSED
+[2021-10-04 15:18:59,652:      agent.CAPM Bot]:     INFO - Session: SID:34744:SessionState.OPEN
+[2021-10-04 15:19:02,171:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 15:19:02,423:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC
+[2021-10-04 15:19:02,717:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA
+[2021-10-04 15:19:02,972:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:19:04,226:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INVALID', 'message': 'Invalid order.'}, 'code': 400}
+[2021-10-04 15:19:04,978:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB,Cancelled due to strategy
+[2021-10-04 15:19:05,230:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA,Cancelled due to strategy
+[2021-10-04 15:19:05,778:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC,Cancelled due to strategy
+[2021-10-04 15:19:06,039:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:19:06,297:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:19:06,554:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:19:06,792:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:19:14,441:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:19:14,948:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:19:16,770:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:19:17,239:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:19:20,835:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:19:24,876:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:20:37,265:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:20:37,814:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:22:27,931:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:28,461:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:29,009:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:22:31,341:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:31,868:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:22:32,148:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:32,669:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:22:32,931:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:33,484:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:22:33,764:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:36,611:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:22:37,139:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:23:17,996:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:23:18,529:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:23:18,799:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:23:37,691:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:23:38,208:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:23:41,506:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:23:42,524:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:23:47,146:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:23:47,688:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:23:57,230:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:23:57,748:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:23:58,265:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:23:58,798:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:23:59,084:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:23:59,605:      agent.CAPM Bot]:     INFO - Order REJECTED with reference P,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:24:06,876:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:24:07,394:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:24:17,051:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:24:17,574:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:24:18,136:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:24:37,776:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:24:48,071:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:24:48,658:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:24:49,201:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:24:49,478:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:24:56,688:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:25:06,632:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:25:07,171:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:25:17,031:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:25:48,076:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:25:48,606:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:25:49,126:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:25:49,410:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:25:57,131:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:25:57,406:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:25:57,701:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:25:57,974:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:25:58,252:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:26:08,545:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:26:16,624:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:26:17,139:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:26:17,674:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:26:27,215:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:26:27,737:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:26:28,250:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:26:47,636:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:26:47,931:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:26:48,483:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:26:48,788:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:26:49,367:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:26:58,473:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:27:03,856:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:04,427:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:27:04,715:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:05,239:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:27:12,436:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:17,067:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:27:17,367:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:17,927:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:18,219:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:27:18,520:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:27:31,389:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:27:31,940:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:27:32,470:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:27:32,990:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:27:33,271:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:27:33,804:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:27:34,115:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:27:34,410:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:27:46,909:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:47,427:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:47,963:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:27:48,258:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:27:48,795:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:27:56,750:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:27:57,377:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:28:06,882:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:28:07,156:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:28:07,700:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:28:17,550:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:28:28,567:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:28:29,125:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:28:37,136:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:28:37,686:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:28:58,476:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:28:59,001:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:28:59,537:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:29:00,065:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:29:00,599:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:29:06,925:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:29:07,450:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:29:17,387:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:29:17,646:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:29:18,269:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:29:18,563:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:29:19,084:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:29:27,270:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:29:47,730:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:29:57,361:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:30:07,370:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:30:07,889:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:30:08,408:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:30:17,186:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:30:17,706:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:30:18,238:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:30:18,498:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:30:37,667:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:30:37,945:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:30:38,490:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:30:59,359:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:31:00,429:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:31:07,122:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:31:07,750:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:31:08,541:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:31:08,808:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:31:12,634:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:31:13,194:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:31:16,993:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:31:19,337:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:31:19,609:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:31:27,636:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:31:31,520:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:31:32,026:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:31:32,568:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:31:37,464:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:31:37,732:      agent.CAPM Bot]:     INFO - Order REJECTED with reference P,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:31:47,004:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:31:48,044:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:31:53,120:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:31:53,644:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:31:54,163:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:31:55,730:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:31:56,261:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:31:57,636:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:31:57,904:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:31:58,445:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:31:58,725:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:32:00,315:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:32:00,824:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:32:02,104:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:32:02,625:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:32:03,155:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:32:06,014:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:32:06,525:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 15:32:07,074:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 15:32:17,717:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:32:28,757:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:32:34,615:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:32:35,115:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:32:37,428:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:32:37,715:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:32:38,061:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:32:38,325:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:32:38,594:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:32:38,861:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:32:39,140:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:32:39,411:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:32:47,251:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:32:47,514:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:32:47,778:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:32:48,057:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:32:48,336:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:32:48,597:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:32:57,118:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:32:57,492:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:32:57,761:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:32:58,649:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:32:58,925:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:32:59,200:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:32:59,474:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:32:59,742:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:33:00,002:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:33:07,381:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:33:07,640:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:33:08,406:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:33:10,237:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:33:16,786:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:33:18,032:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:33:18,377:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:33:19,178:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:33:19,452:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:33:19,714:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:33:20,238:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:33:21,009:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:33:27,150:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:33:27,433:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:33:27,699:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:33:27,967:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:33:28,250:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:33:37,327:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:33:43,844:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 15:33:43,845:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 15:35:12 India Standard Time] ===============================
+[2021-10-04 15:35:12,720:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 15:35:14,621:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 15:35:17,089:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 15:35:17,109:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 15:35:17,978:      agent.CAPM Bot]:     INFO - Session: SID:34744:SessionState.OPEN
+[2021-10-04 15:35:27,376:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:35:27,883:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:35:38,002:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:35:48,245:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:35:48,907:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:35:49,705:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:35:53,076:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:35:53,609:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:35:54,159:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:35:57,251:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:35:57,776:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:36:08,487:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:36:17,270:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:36:17,559:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:36:17,857:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:36:18,245:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:36:18,826:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:36:21,169:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:36:21,703:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:36:28,083:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:36:32,534:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:36:33,083:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:36:37,931:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:36:38,214:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:36:38,754:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:36:39,027:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:36:39,575:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:36:46,212:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:36:46,774:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:36:48,362:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:36:48,893:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:36:51,233:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:36:51,792:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:36:52,841:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:36:57,196:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:36:57,472:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:36:58,008:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:36:58,301:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:37:07,455:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:37:07,746:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:37:08,123:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:37:08,421:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:37:08,719:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:37:09,025:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:37:09,568:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:37:17,535:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:37:21,769:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:37:22,603:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:37:22,867:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:37:23,421:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:37:27,310:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:37:27,832:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:37:28,136:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:37:28,517:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:37:41,139:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:37:58,444:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:37:58,706:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:37:59,239:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:38:07,719:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:38:07,984:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:38:08,255:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:38:08,520:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:38:08,801:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:38:17,887:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:38:18,154:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:38:18,669:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:38:19,171:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:38:27,684:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:38:28,200:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:38:28,739:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 15:38:29,009:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 15:38:29,630:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:38:40,066:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 15:38:47,798:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 15:38:48,966:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:38:57,574:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:38:58,094:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:38:59,338:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:39:02,406:      agent.CAPM Bot]:     INFO - Session: SID:34744:SessionState.PAUSED
+[2021-10-04 15:39:05,843:      agent.CAPM Bot]:     INFO - Session: SID:34744:SessionState.CLOSED
+[2021-10-04 15:39:21,380:      agent.CAPM Bot]:     INFO - Session: SID:34745:SessionState.OPEN
+[2021-10-04 15:39:22,538:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB
+[2021-10-04 15:39:22,801:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC
+[2021-10-04 15:39:23,051:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA
+[2021-10-04 15:39:23,315:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INVALID', 'message': 'Invalid order.'}, 'code': 400}
+[2021-10-04 15:39:23,813:       comms.Request]:    ERROR - Couldn't parse response from server as JSON. Perhaps use a custom data parser if expecting response in different format
+[2021-10-04 15:39:23,814:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,note and info - {'response': {}, 'code': 400}
+[2021-10-04 15:39:25,380:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockB,Cancelled due to strategy
+[2021-10-04 15:39:25,668:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockA,Cancelled due to strategy
+[2021-10-04 15:39:25,980:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC,Cancelled due to strategy
+[2021-10-04 15:39:26,253:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC
+[2021-10-04 15:39:26,528:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:39:26,795:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,note and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INVALID', 'message': 'Invalid order.'}, 'code': 400}
+[2021-10-04 15:39:27,080:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - E,stockC,Cancelled due to strategy
+[2021-10-04 15:39:27,358:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:39:27,639:      agent.CAPM Bot]:     INFO - Order REJECTED with reference P,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:39:27,899:      agent.CAPM Bot]:     INFO - Order REJECTED with reference E,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:39:27,930:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 15:39:27,931:      agent.CAPM Bot]:     INFO - Shutting Down
+[2021-10-04 15:39:28,201:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:39:28,450:       comms.Request]:    ERROR - Couldn't parse response from server as JSON. Perhaps use a custom data parser if expecting response in different format
+[2021-10-04 15:39:28,450:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {}, 'code': 400}
+
+=============================== Log Started [2021-10-04 15:39:32 India Standard Time] ===============================
+[2021-10-04 15:39:32,497:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 15:39:34,112:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 15:39:36,317:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 15:39:36,333:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 15:39:37,099:      agent.CAPM Bot]:     INFO - Session: SID:34745:SessionState.OPEN
+[2021-10-04 15:40:39,344:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:40:39,859:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:40:40,705:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:40:41,237:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:40:41,509:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:40:42,019:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:40:58,815:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:40:59,334:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:40:59,859:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:41:00,368:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 15:41:08,866:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:41:09,388:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:41:09,929:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:41:11,209:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 15:41:11,466:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:41:11,994:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:41:17,227:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:41:17,491:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:41:39,216:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:41:39,740:      agent.CAPM Bot]:     INFO - Order REJECTED with reference P,stockC and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:41:41,316:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:41:41,614:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 15:41:43,145:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 15:41:53,720:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 15:42:07,702:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:42:08,232:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:42:08,508:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 15:42:09,018:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 15:43:09,004:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 15:43:09,516:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 15:43:16,039:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 15:43:16,039:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 16:00:58 India Standard Time] ===============================
+[2021-10-04 16:00:58,812:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 16:01:00,750:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 16:01:03,058:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 16:01:03,074:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 16:01:03,874:      agent.CAPM Bot]:     INFO - Session: SID:34746:SessionState.OPEN
+[2021-10-04 16:01:05,344:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:05,828:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:06,375:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:01:08,889:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:09,159:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:01:09,428:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:09,691:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 16:01:11,724:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:01:12,789:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 16:01:18,343:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 16:01:18,876:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:19,394:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:19,895:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:20,413:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:01:21,541:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:01:22,576:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 16:01:23,078:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note
+[2021-10-04 16:01:23,601:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,note,Cancelled due to strategy
+[2021-10-04 16:01:28,888:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:29,390:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:29,893:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:30,410:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:30,685:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:31,215:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:31,479:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:32,009:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:32,270:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:32,546:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:01:32,818:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:38,651:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:39,168:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:39,700:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:41,265:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:41,795:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:44,377:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:44,635:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:48,186:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:48,746:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:49,555:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:49,811:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:50,079:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:50,595:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:52,365:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:52,873:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:53,416:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:01:54,445:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:59,097:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:59,361:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:01:59,639:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:01:59,908:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:00,174:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:02:00,428:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:02:00,715:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:02:01,247:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:02:11,026:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:02:11,302:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:11,790:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:12,321:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:02:16,934:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:22,059:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:26,835:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:27,350:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:27,872:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:02:31,757:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:32,262:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:32,766:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:02:36,909:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:37,431:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:37,959:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:02:49,020:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:49,300:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:02:49,567:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:02:49,833:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:02:50,118:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:02:50,371:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:02:50,935:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:02:55,097:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:03:08,723:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:03:09,203:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:03:09,478:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:03:09,768:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:03:10,083:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:03:10,341:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:03:18,842:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:03:19,119:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:03:20,973:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:03:21,258:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:03:21,786:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:03:28,593:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:03:29,354:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:03:49,346:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:03:49,837:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:03:50,392:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 16:03:58,844:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:03:59,368:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:03:59,630:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:03:59,902:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 16:04:00,181:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:04:00,450:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:04:00,994:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:04:08,942:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:04:29,610:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:04:29,869:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:04:30,138:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 16:04:30,405:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:04:39,318:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:04:39,583:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:04:39,837:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:04:40,101:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:04:40,366:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:04:40,636:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:04:48,748:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:04:49,034:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:04:49,543:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 16:04:58,696:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:04:59,510:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:04:59,761:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:00,291:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:05:09,074:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:05:09,331:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:09,855:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:05:10,093:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:10,603:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:05:10,858:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:11,376:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:05:11,643:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:12,167:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:05:12,427:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:05:19,680:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:05:28,736:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:05:39,111:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:39,613:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:40,164:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:05:40,420:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:05:48,841:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:05:49,356:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:05:50,903:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:05:51,164:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:05:54,825:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:05:55,327:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:05:55,857:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:06:09,651:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:10,171:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:10,698:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:06:10,959:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:06:21,667:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:06:23,748:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:24,268:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:24,775:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:06:29,666:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:30,202:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:06:38,959:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:06:39,216:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:39,468:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:06:39,727:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:39,985:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:06:40,272:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:06:49,350:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:49,851:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:06:50,351:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:06:59,727:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:07:20,011:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:20,547:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:20,790:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:21,319:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:21,576:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:22,079:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:22,351:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:22,836:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:23,091:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:23,591:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:23,853:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:24,392:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:49,973:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 16:07:50,253:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:50,791:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:51,348:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:51,840:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:52,368:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:07:58,877:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:07:59,383:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:00,407:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 16:08:09,407:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:09,948:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:10,482:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:11,008:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:11,552:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:08:19,406:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:39,615:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:52,100:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:08:59,040:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 16:09:04,661:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:09:09,262:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:09:09,550:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 16:09:19,852:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:09:20,372:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 16:09:34,780:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:09:35,308:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:09:36,090:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:09:36,602:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:09:59,947:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:10:00,257:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:10:00,781:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockB and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 16:10:20,127:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:10:20,639:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:10:21,143:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:10:21,398:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:10:22,176:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:10:32,054:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:10:43,035:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:10:43,558:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:10:43,817:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:10:44,338:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:10:49,713:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:10:50,200:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:10:50,712:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:10:50,964:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:11:01,577:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:11:09,331:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:11:09,593:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:11:09,856:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:11:10,112:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:11:10,633:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:11:19,177:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:11:19,491:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:11:29,775:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:11:39,537:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:11:40,054:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:11:49,333:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:11:49,842:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:11:50,361:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:11:59,586:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:11:59,847:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:00,127:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:12:00,382:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:00,890:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:01,391:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:12:01,642:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:02,168:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:12:02,414:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:02,936:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:12:03,193:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:12:03,463:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:12:13,749:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:12:14,015:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:12:19,775:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:12:20,050:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:20,301:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:12:20,560:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:12:20,826:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:12:21,071:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 16:13:10,245:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 16:13:19,441:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:13:21,082:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 16:13:40,573:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:13:49,851:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:13:50,119:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:13:50,384:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:13:50,901:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:14:50,317:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:14:59,849:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:00,366:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:00,878:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:15:09,360:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:15:09,900:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:15:10,449:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:15:11,497:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:15:11,759:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:12,304:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:12,811:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:13,312:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:19,771:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:20,321:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:20,866:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:21,375:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:21,908:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:22,420:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:15:22,941:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:15:29,219:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:15:29,989:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:15:33,098:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:15:39,399:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:15:39,717:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:15:39,985:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:40,250:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:15:40,518:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:40,789:      agent.CAPM Bot]:     INFO - Order REJECTED with reference R,stockA and info - {'response': {'status': 'BAD_REQUEST', 'error': 'ORDER_INSUFFICIENT_ASSETS', 'message': 'Insufficient assets.'}, 'code': 400}
+[2021-10-04 16:15:41,045:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:41,573:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:15:50,057:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:15:50,319:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 16:16:10,133:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 16:16:10,395:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:10,913:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:11,421:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:11,930:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:16:30,692:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:30,974:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB
+[2021-10-04 16:16:31,237:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:31,765:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:16:32,039:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:32,581:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC,Cancelled due to strategy
+[2021-10-04 16:16:32,841:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC
+[2021-10-04 16:16:40,106:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:16:41,669:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockB,Cancelled due to strategy
+[2021-10-04 16:16:43,496:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockC,Cancelled due to strategy
+[2021-10-04 16:16:49,886:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:50,433:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:50,713:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:16:50,983:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:16:59,525:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:17:00,053:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:17:00,553:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:17:01,095:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:17:01,351:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:17:01,887:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:17:02,165:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:17:09,893:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:17:10,423:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 16:17:10,693:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:17:11,217:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 16:17:12,809:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:17:20,104:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:17:30,160:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA
+[2021-10-04 16:17:30,433:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:17:30,968:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:17:50,453:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - P,stockA,Cancelled due to strategy
+[2021-10-04 16:17:50,738:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:18:00,065:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:18:30,888:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:18:39,629:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:18:39,906:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:18:40,198:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:18:40,473:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB
+[2021-10-04 16:18:41,005:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockB,Cancelled due to strategy
+[2021-10-04 16:18:50,385:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:18:50,917:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:18:51,428:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA,Cancelled due to strategy
+[2021-10-04 16:18:59,914:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:19:00,508:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockC
+[2021-10-04 16:19:00,801:      agent.CAPM Bot]:     INFO - Order ACCEPTED with details - R,stockA
+[2021-10-04 16:19:11,887:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 16:19:11,902:      agent.CAPM Bot]:     INFO - Shutting Down
+
+=============================== Log Started [2021-10-04 16:19:22 India Standard Time] ===============================
+[2021-10-04 16:19:22,168:      agent.CAPM Bot]:     INFO - Using fmclient version: 3.2.3-alpha.1
+[2021-10-04 16:19:24,000:      agent.CAPM Bot]:     INFO - Requesting initial information for marketplace `1347`
+[2021-10-04 16:19:26,292:      agent.CAPM Bot]:     INFO - Initialisation complete. Received marketplace information.
+[2021-10-04 16:19:26,304:      agent.CAPM Bot]:     INFO - Bot initialised, I have the payoffs for the states.
+[2021-10-04 16:19:28,627:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,639:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,643:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,647:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,651:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,654:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,657:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:28,776:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,003:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,223:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,328:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,335:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,339:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,437:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,440:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,443:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,446:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,558:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,562:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,565:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,569:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,573:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,691:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,695:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,698:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,701:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,705:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,793:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,799:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,802:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,805:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,908:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,917:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,920:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,924:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:29,929:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,009:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,017:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,020:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,022:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,024:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,141:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,146:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,150:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,154:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,267:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,472:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,476:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,700:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,704:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:30,924:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:31,041:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:31,270:      agent.CAPM Bot]:    ERROR - Exception in CAPMBot.received_orders() method. Run with DEBUG for details.
+[2021-10-04 16:19:31,286:      agent.CAPM Bot]:    ERROR - Oops. Keyboard Interrupt received from user.
+[2021-10-04 16:19:31,287:      agent.CAPM Bot]:     INFO - Shutting Down
